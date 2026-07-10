@@ -13,14 +13,14 @@
    ============================================================ */
 :root {
   /* Palette */
-  --bg-primary:    #0D0C0B;
-  --bg-secondary:  #171512;
-  --text-primary:  #EDE6D8;
-  --text-muted:    #8C8378;
-  --accent-gold:   #B08D57;
-  --accent-copper: #8A5A3D;
-  --divider:       #2A2622;
-  --overlay:       rgba(13, 12, 11, 0.94);
+  --bg-primary:    #000000; /* Nero puro */
+  --bg-secondary:  #0A0A0A; /* Grigio scurissimo */
+  --text-primary:  #FFFFFF; /* Bianco puro */
+  --text-muted:    #888888;
+  --accent-primary: #FFFFFF; /* Accento bianco/argento */
+  --accent-secondary: #333333;
+  --divider:       #1A1A1A;
+  --overlay:       rgba(0, 0, 0, 0.94);
 
   /* Typography */
   --font-display: 'Bebas Neue', Impact, sans-serif;
@@ -99,7 +99,7 @@ button {
   display: block;
   width: 0;
   height: 1px;
-  background-color: var(--accent-gold);
+  background-color: var(--accent-primary);
   margin-bottom: 1.75rem;
   transition: width var(--t-slow);
   transition-delay: 100ms;
@@ -167,7 +167,7 @@ button {
 
 .section-title em {
   font-style: normal;
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 .section-header {
@@ -194,9 +194,9 @@ button {
   font-size: 0.9375rem;
   letter-spacing: 0.03em;
   color: var(--bg-primary);
-  background-color: var(--accent-gold);
+  background-color: var(--accent-primary);
   padding: 0.875rem 1.875rem;
-  border: 1px solid var(--accent-gold);
+  border: 1px solid var(--accent-primary);
   border-radius: 2px;
   transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast);
   white-space: nowrap;
@@ -205,11 +205,11 @@ button {
 .btn-primary:hover,
 .btn-primary:focus-visible {
   background-color: transparent;
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 .btn-primary:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
 }
 
@@ -231,12 +231,12 @@ button {
 
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
-  border-color: var(--accent-gold);
-  color: var(--accent-gold);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 .btn-ghost:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
 }
 
@@ -316,7 +316,7 @@ button {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--accent-gold);
+  background-color: var(--accent-primary);
   transition: width var(--t-fast);
 }
 
@@ -330,7 +330,7 @@ button {
 }
 
 .nav-links a:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 4px;
   border-radius: 1px;
 }
@@ -372,7 +372,7 @@ button {
 }
 
 .nav-hamburger:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -417,7 +417,7 @@ button {
 }
 
 .mobile-menu-links a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 /* ============================================================
@@ -545,7 +545,7 @@ button {
 .hero-location-dot {
   width: 5px;
   height: 5px;
-  background-color: var(--accent-gold);
+  background-color: var(--accent-primary);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -637,8 +637,8 @@ button {
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-gold);
-  border: 1px solid var(--accent-gold);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
   padding: 0.25rem 0.625rem;
   border-radius: 2px;
 }
@@ -669,7 +669,7 @@ button {
 }
 
 .service-item:hover {
-  border-left-color: var(--accent-gold);
+  border-left-color: var(--accent-primary);
   padding-left: 1rem;
 }
 
@@ -684,7 +684,7 @@ button {
 }
 
 .service-item:hover .service-name {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 /* Leader dots */
@@ -698,7 +698,7 @@ button {
 }
 
 .service-item:hover .service-dots {
-  border-color: var(--accent-copper);
+  border-color: var(--accent-secondary);
 }
 
 .service-meta {
@@ -728,7 +728,7 @@ button {
 }
 
 .service-item:hover .service-price {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 .service-note {
@@ -822,12 +822,12 @@ button {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
-  color: var(--accent-gold);
+  color: var(--accent-primary);
   text-transform: uppercase;
 }
 
 .gallery-item:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 
@@ -862,7 +862,7 @@ button {
   font-size: 0.625rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: var(--accent-primary);
   margin-bottom: 0.75rem;
 }
 
@@ -899,7 +899,7 @@ button {
 }
 
 .orari-closed {
-  color: var(--accent-copper);
+  color: var(--accent-secondary);
 }
 
 /* Map */
@@ -996,12 +996,12 @@ button {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--accent-gold);
+  background-color: var(--accent-primary);
   transition: width var(--t-fast);
 }
 
 .footer-links-row a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-primary);
 }
 
 .footer-links-row a:hover::after {
@@ -1009,7 +1009,7 @@ button {
 }
 
 .footer-links-row a:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
   border-radius: 1px;
 }
@@ -1079,11 +1079,11 @@ button {
 .lightbox-close:hover,
 .lightbox-close:focus-visible {
   color: var(--text-primary);
-  border-color: var(--accent-gold);
+  border-color: var(--accent-primary);
 }
 
 .lightbox-close:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 
@@ -1106,11 +1106,11 @@ button {
 .lightbox-nav:hover,
 .lightbox-nav:focus-visible {
   color: var(--text-primary);
-  border-color: var(--accent-gold);
+  border-color: var(--accent-primary);
 }
 
 .lightbox-nav:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 
