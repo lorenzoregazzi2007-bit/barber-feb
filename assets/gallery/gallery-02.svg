@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <!-- PLACEHOLDER galleria 02 — sostituire con foto lavoro reale -->
+  <rect width="600" height="600" fill="#0D0C0B"/>
+  <!-- Razor icon minimal -->
+  <g transform="translate(300,280)" stroke="#2A2622" stroke-width="1.5" stroke-linecap="round">
+    <path d="M-80,20 L80,-20 L90,0 L80,20 Z" fill="none"/>
+    <path d="M-80,20 L-80,40 Q-85,50 -75,48 L-60,38 L-60,20 Z" fill="none"/>
+    <line x1="-60" y1="20" x2="90" y2="20" stroke-width="0.8"/>
+  </g>
+  <text x="300" y="540" font-family="monospace" font-size="10" fill="#8C8378" text-anchor="middle" letter-spacing="2">gallery-02.jpg</text>
+  <rect x="0.5" y="0.5" width="599" height="599" stroke="#2A2622" stroke-width="1" fill="none"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <!-- PLACEHOLDER galleria 01 — sostituire con foto lavoro reale -->
+  <rect width="600" height="800" fill="#171512"/>
+  <!-- Scissors icon minimal -->
+  <g transform="translate(300,360)" stroke="#2A2622" stroke-width="1.5" stroke-linecap="round">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#2A2622" stroke-width="1"/>
+    <line x1="-20" y1="-30" x2="30" y2="30"/>
+    <line x1="20" y1="-30" x2="-30" y2="30"/>
+    <circle cx="-30" cy="30" r="8" fill="#171512" stroke="#2A2622"/>
+    <circle cx="30" cy="30" r="8" fill="#171512" stroke="#2A2622"/>
+  </g>
+  <text x="300" y="720" font-family="monospace" font-size="10" fill="#8C8378" text-anchor="middle" letter-spacing="2">gallery-01.jpg</text>
+  <rect x="0.5" y="0.5" width="599" height="799" stroke="#2A2622" stroke-width="1" fill="none"/>
+</svg>

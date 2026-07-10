@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <!-- PLACEHOLDER galleria 06 — sostituire con foto lavoro reale -->
+  <rect width="600" height="600" fill="#0D0C0B"/>
+  <!-- Blade/razor handle detail -->
+  <g transform="translate(300,280)" stroke="#2A2622" stroke-width="1.5" stroke-linecap="round">
+    <circle cx="0" cy="0" r="50" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="none"/>
+    <line x1="0" y1="-50" x2="0" y2="-35"/>
+    <line x1="0" y1="35" x2="0" y2="50"/>
+    <line x1="-50" y1="0" x2="-35" y2="0"/>
+    <line x1="35" y1="0" x2="50" y2="0"/>
+  </g>
+  <text x="300" y="540" font-family="monospace" font-size="10" fill="#8C8378" text-anchor="middle" letter-spacing="2">gallery-06.jpg</text>
+  <rect x="0.5" y="0.5" width="599" height="599" stroke="#2A2622" stroke-width="1" fill="none"/>
+</svg>

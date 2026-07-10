@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO — Meta tag base
+       ============================================================ -->
+  <title>Barber Feb — Barbiere a Minerbio (BO)</title>
+  <meta name="description" content="Barber Feb è il barbiere di riferimento a Minerbio, in provincia di Bologna. Taglio uomo, barba, rasatura a rasoio. Via Canaletto 1. Prenota online." />
+  <meta name="keywords" content="barbiere Minerbio, barber Minerbio, taglio uomo Bologna, Barber Feb, barbiere San Giorgio di Piano, barbiere Baricella" />
+  <meta name="author" content="Barber Feb" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Barber Feb — Barbiere a Minerbio (BO)" />
+  <meta property="og:description" content="Taglio di qualità a Minerbio. Senza fronzoli, senza attese inutili. Prenota il tuo taglio online." />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- ============================================================
+       GOOGLE FONTS — font-display: swap per performance
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav id="nav" role="navigation" aria-label="Navigazione principale">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Barber Feb — torna in cima">Barber Feb</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#chi-siamo">Chi sono</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#galleria">Galleria</a></li>
+        <li><a href="#dove-siamo">Dove siamo</a></li>
+      </ul>
+
+      <a
+        href="#"
+        class="btn-primary nav-cta"
+        data-booking
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Prenota il tuo taglio — apre app prenotazioni"
+      >Prenota</a>
+
+      <button
+        id="nav-hamburger"
+        class="nav-hamburger"
+        aria-label="Apri menu di navigazione"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MOBILE MENU OVERLAY
+       ============================================================ -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
+    <ul class="mobile-menu-links" role="list">
+      <li><a href="#chi-siamo">Chi sono</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#dove-siamo">Dove siamo</a></li>
+    </ul>
+    <a
+      href="#"
+      class="btn-primary"
+      data-booking
+      target="_blank"
+      rel="noopener noreferrer"
+    >Prenota il tuo taglio <span class="btn-arrow">↗</span></a>
+  </div>
+
+
+  <!-- ============================================================
+       SEZIONE 1 — HERO
+       ============================================================ -->
+  <section id="hero" aria-label="Hero — Barber Feb">
+
+    <!-- SVG Rasoio a mano libera — elemento decorativo -->
+    <svg
+      class="hero-razor"
+      viewBox="0 0 280 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <!-- Lama del rasoio -->
+      <path
+        d="M 30 130 L 220 48 L 252 80 L 220 112 Z"
+        stroke="#B08D57"
+        stroke-width="1.2"
+        fill="none"
+        stroke-linejoin="round"
+      />
+      <!-- Taglio/filo della lama -->
+      <line
+        x1="50" y1="118"
+        x2="252" y2="80"
+        stroke="#B08D57"
+        stroke-width="0.6"
+        opacity="0.5"
+      />
+      <!-- Manico del rasoio -->
+      <path
+        d="M 30 130 L 30 156 Q 24 168 36 165 L 58 152 L 58 130 Z"
+        stroke="#B08D57"
+        stroke-width="1.2"
+        fill="none"
+        stroke-linejoin="round"
+      />
+      <!-- Perno del manico -->
+      <circle cx="44" cy="148" r="4" stroke="#B08D57" stroke-width="1" fill="none" />
+      <!-- Rifinitura punta lama -->
+      <path
+        d="M 220 48 L 252 64 L 252 80"
+        stroke="#B08D57"
+        stroke-width="0.8"
+        fill="none"
+        stroke-linejoin="round"
+        opacity="0.6"
+      />
+    </svg>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <!-- Signature line — si traccia via CSS animation al caricamento -->
+        <div class="sig-line" aria-hidden="true"></div>
+
+        <h1 class="hero-title">
+          <span class="word-barber">Barber</span>
+          <span class="word-feb">Feb</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Taglio di qualità a Minerbio.<br />
+          Senza fronzoli, senza attese inutili.
+        </p>
+
+        <div class="hero-cta">
+          <a
+            href="#"
+            class="btn-primary"
+            data-booking
+            target="_blank"
+            rel="noopener noreferrer"
+            id="hero-cta-btn"
+          >
+            Prenota il tuo taglio <span class="btn-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-location" aria-label="Indirizzo">
+        <div class="hero-location-dot" aria-hidden="true"></div>
+        <span class="hero-location-text">Via Canaletto 1 — Minerbio, Bologna</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 2 — CHI SIAMO
+       ============================================================ -->
+  <section id="chi-siamo" aria-label="Chi siamo — Il Barber">
+    <div class="section-wrap">
+
+      <div class="section-header reveal">
+        <div class="sig-line" aria-hidden="true"></div>
+        <p class="section-label">Il Barber</p>
+        <h2 class="section-title">Chi <em>sono</em></h2>
+      </div>
+
+      <div class="chi-siamo-grid">
+
+        <!-- Foto ritratto -->
+        <!-- DA SOSTITUIRE: rimpiazza il tag <img> con
+             <img src="assets/foto-barber-feb.jpg" alt="Foto di [Nome Barber]" ...>
+             oppure sostituisci direttamente il file foto-barber-feb.svg
+             con foto-barber-feb.jpg nella cartella assets/ -->
+        <div class="chi-siamo-photo-wrap reveal">
+          <img
+            src="assets/foto-barber-feb.svg"
+            alt="Foto del barbiere — da sostituire con foto reale"
+            width="480"
+            height="640"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Testo -->
+        <div class="chi-siamo-text-wrap">
+          <p class="reveal">
+            Sono Feb. Faccio il barbiere da quando avevo vent'anni, ho imparato
+            sulla sedia — non sui tutorial. A Minerbio conosco quasi tutti i
+            clienti per nome, e questo mi piace.
+          </p>
+          <!-- DA CONFERMARE: testo biografico reale -->
+          <p class="reveal">
+            Il taglio lo faccio bene, la barba la faccio meglio. Nessuna fretta,
+            nessun compromesso sul risultato. Se vuoi qualcosa di preciso — fade,
+            contorno, rasatura con rasoio — sono il posto giusto.
+          </p>
+          <!-- DA CONFERMARE: testo biografico reale -->
+          <p class="reveal">
+            Via Canaletto 1, Minerbio. Prenota online, vieni quando vuoi.
+          </p>
+
+          <!-- Badge specializzazioni — DA CONFERMARE con il barber -->
+          <!-- Rimuovi o personalizza questi badge in base alle specializzazioni reali -->
+          <div class="badge-row reveal">
+            <!-- DA CONFERMARE: specializzazioni reali -->
+            <span class="badge">Fade &amp; Skin Fade</span>
+            <span class="badge">Barba a rasoio</span>
+            <span class="badge">Contorno &amp; Disegni</span>
+          </div>
+        </div>
+
+      </div><!-- /chi-siamo-grid -->
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 3 — SERVIZI E PREZZI
+       ============================================================ -->
+  <section id="servizi" aria-label="Servizi e listino prezzi">
+    <div class="section-wrap">
+
+      <div class="section-header reveal">
+        <div class="sig-line" aria-hidden="true"></div>
+        <p class="section-label">Listino</p>
+        <h2 class="section-title">I <em>servizi</em></h2>
+      </div>
+
+      <!-- Listino "scheda tecnica" con leader dots -->
+      <ul class="service-list" role="list" aria-label="Listino prezzi Barber Feb">
+
+        <li class="service-item reveal">
+          <span class="service-name">Taglio uomo</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~30 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price">€ 15</span>
+          </div>
+        </li>
+
+        <li class="service-item reveal">
+          <span class="service-name">Taglio + Barba</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~45 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price">€ 25</span>
+          </div>
+        </li>
+
+        <li class="service-item reveal">
+          <span class="service-name">Barba e rifinitura a lametta</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~30 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price">€ 15</span>
+          </div>
+        </li>
+
+        <li class="service-item reveal">
+          <span class="service-name">Taglio + Shampoo</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~40 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price">€ 18</span>
+          </div>
+        </li>
+
+        <li class="service-item reveal">
+          <span class="service-name">Taglio + Trattamento viso + Shampoo</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~60 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price">€ 25</span>
+          </div>
+        </li>
+
+        <!-- DA CONFERMARE: prezzo e durata taglio bambino -->
+        <li class="service-item reveal">
+          <span class="service-name">Taglio bambino</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">~20 min</span><!-- DA CONFERMARE: durata -->
+            <span class="service-price service-note">su richiesta</span><!-- DA CONFERMARE: prezzo -->
+          </div>
+        </li>
+
+        <!-- DA CONFERMARE: trattamenti specifici e relativi prezzi -->
+        <li class="service-item reveal">
+          <span class="service-name">Contorno, disegni e trattamenti</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <div class="service-meta">
+            <span class="service-duration">variabile</span><!-- DA CONFERMARE -->
+            <span class="service-price service-note">su richiesta</span><!-- DA CONFERMARE: prezzo -->
+          </div>
+        </li>
+
+      </ul><!-- /service-list -->
+
+      <div class="servizi-cta reveal">
+        <a
+          href="#"
+          class="btn-primary"
+          data-booking
+          target="_blank"
+          rel="noopener noreferrer"
+          id="servizi-cta-btn"
+        >
+          Prenota il tuo taglio <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 4 — GALLERIA LAVORI
+       ============================================================ -->
+  <section id="galleria" aria-label="Galleria dei lavori">
+    <div class="section-wrap">
+
+      <div class="section-header reveal">
+        <div class="sig-line" aria-hidden="true"></div>
+        <p class="section-label">Galleria</p>
+        <h2 class="section-title">I <em>lavori</em></h2>
+      </div>
+
+      <!-- Griglia asimmetrica:
+           Col sinistra (1.2fr): item 1 occupa 2 righe (portrait)
+           Col centro (1fr):    item 2 + item 4
+           Col destra (1fr):    item 3 + item 5
+           Riga 3 (implicita):  item 6 occupa colonne 2-3 (landscape)
+           
+           DA SOSTITUIRE: rimpiazza gli src degli <img> con le foto reali.
+           I file SVG placeholder si trovano in assets/gallery/
+           Usa formato .jpg per le foto reali (es. gallery-01.jpg).
+      -->
+      <div class="gallery-grid" role="list" aria-label="Galleria fotografica dei lavori">
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-01.jpg — foto verticale (portrait) -->
+          <img
+            src="assets/gallery/gallery-01.svg"
+            alt="Lavoro 1 — taglio uomo"
+            width="600"
+            height="800"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-02.jpg — foto quadrata -->
+          <img
+            src="assets/gallery/gallery-02.svg"
+            alt="Lavoro 2 — taglio e barba"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-03.jpg — foto quadrata -->
+          <img
+            src="assets/gallery/gallery-03.svg"
+            alt="Lavoro 3 — fade"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-04.jpg — foto quadrata -->
+          <img
+            src="assets/gallery/gallery-04.svg"
+            alt="Lavoro 4 — barba rasatura"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-05.jpg — foto quadrata -->
+          <img
+            src="assets/gallery/gallery-05.svg"
+            alt="Lavoro 5 — contorno e disegni"
+            width="600"
+            height="600"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item reveal" role="listitem">
+          <!-- DA SOSTITUIRE: gallery-06.jpg — foto orizzontale (landscape) -->
+          <img
+            src="assets/gallery/gallery-06.svg"
+            alt="Lavoro 6 — trattamento completo"
+            width="900"
+            height="600"
+            loading="lazy"
+          />
+          <div class="gallery-item-overlay" aria-hidden="true">
+            <span>Vedi ↗</span>
+          </div>
+        </figure>
+
+      </div><!-- /gallery-grid -->
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 5 — DOVE SIAMO / ORARI
+       ============================================================ -->
+  <section id="dove-siamo" aria-label="Dove siamo e orari">
+    <div class="section-wrap">
+
+      <div class="section-header reveal">
+        <div class="sig-line" aria-hidden="true"></div>
+        <p class="section-label">Info</p>
+        <h2 class="section-title">Dove <em>siamo</em></h2>
+      </div>
+
+      <div class="location-grid">
+
+        <!-- Colonna sinistra: info -->
+        <div class="location-info">
+
+          <!-- Indirizzo -->
+          <div class="location-info-block reveal">
+            <p class="location-info-block-label">Indirizzo</p>
+            <p>
+              Via Canaletto 1<br />
+              40061 Minerbio (BO)<br />
+              Emilia-Romagna
+            </p>
+          </div>
+
+          <!-- Orari -->
+          <!-- DA CONFERMARE: orari verificati con il barber -->
+          <div class="location-info-block reveal">
+            <p class="location-info-block-label">Orari</p><!-- DA CONFERMARE: orario reale -->
+            <div class="orari-table" role="table" aria-label="Orari di apertura">
+              <span class="orari-day" role="cell">Lun – Ven</span>
+              <span class="orari-time" role="cell">9:00 – 12:30 / 13:00 – 21:00</span><!-- DA CONFERMARE -->
+              <span class="orari-day" role="cell">Sabato</span>
+              <span class="orari-time" role="cell">8:00 – 13:30</span><!-- DA CONFERMARE -->
+              <span class="orari-day" role="cell">Domenica</span>
+              <span class="orari-time orari-closed" role="cell">Chiuso</span>
+            </div>
+          </div>
+
+          <!-- Contatti -->
+          <div class="location-info-block reveal">
+            <p class="location-info-block-label">Contatti</p>
+            <!-- DA CONFERMARE: numero di telefono confermato -->
+            <a href="tel:+393339928198" aria-label="Chiama Barber Feb">+39 333 992 8198</a>
+            <a
+              href="#"
+              data-instagram
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Profilo Instagram Barber Feb"
+            >@barber_feb su Instagram</a>
+          </div>
+
+        </div><!-- /location-info -->
+
+        <!-- Colonna destra: mappa -->
+        <div class="location-map reveal" aria-label="Mappa Google Maps — Via Canaletto 1, Minerbio">
+          <!-- Google Maps embed — Via Canaletto 1, 40061 Minerbio BO -->
+          <iframe
+            src="https://maps.google.com/maps?q=Via+Canaletto+1,+40061+Minerbio+BO,+Italy&output=embed&hl=it&z=16"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Posizione Barber Feb — Via Canaletto 1, Minerbio"
+          ></iframe>
+        </div>
+
+      </div><!-- /location-grid -->
+
+      <div class="location-cta reveal">
+        <a
+          href="#"
+          class="btn-primary"
+          data-booking
+          target="_blank"
+          rel="noopener noreferrer"
+          id="location-cta-btn"
+        >
+          Prenota il tuo taglio <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 6 — FOOTER
+       ============================================================ -->
+  <footer id="footer" aria-label="Footer Barber Feb">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <!-- Monogramma BF — firma del brand -->
+        <div class="footer-monogram" aria-hidden="true">BF</div>
+
+        <div>
+          <div class="sig-line" style="margin-bottom: 1.25rem;" aria-hidden="true"></div>
+          <div class="footer-links-row">
+            <a
+              href="#"
+              data-instagram
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Barber Feb"
+            >Instagram</a>
+            <a href="tel:+393339928198" aria-label="Telefono Barber Feb">+39 333 992 8198</a><!-- DA CONFERMARE -->
+            <a
+              href="#"
+              data-booking
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+              id="footer-cta-btn"
+            >
+              Prenota il tuo taglio <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          <span id="footer-year"></span> © Barber Feb — Minerbio (BO)
+        </p>
+        <p class="footer-copyright">
+          Via Canaletto 1, 40061 Minerbio
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Visualizzatore galleria"
+  >
+    <button
+      id="lightbox-close"
+      class="lightbox-close"
+      aria-label="Chiudi galleria"
+    >✕</button>
+
+    <button
+      id="lightbox-prev"
+      class="lightbox-nav lightbox-prev"
+      aria-label="Foto precedente"
+    >←</button>
+
+    <button
+      id="lightbox-next"
+      class="lightbox-nav lightbox-next"
+      aria-label="Foto successiva"
+    >→</button>
+
+    <img
+      id="lightbox-img"
+      class="lightbox-media"
+      src=""
+      alt=""
+    />
+
+    <div id="lightbox-counter" class="lightbox-counter" aria-live="polite"></div>
+  </div>
+
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

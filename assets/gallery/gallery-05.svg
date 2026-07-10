@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" fill="none">
+  <!-- PLACEHOLDER galleria 05 — sostituire con foto lavoro reale -->
+  <rect width="900" height="600" fill="#171512"/>
+  <!-- Diamond shape -->
+  <g transform="translate(450,280)" stroke="#2A2622" stroke-width="1.5">
+    <polygon points="0,-50 50,0 0,50 -50,0" fill="none"/>
+    <polygon points="0,-30 30,0 0,30 -30,0" fill="none"/>
+  </g>
+  <text x="450" y="540" font-family="monospace" font-size="10" fill="#8C8378" text-anchor="middle" letter-spacing="2">gallery-05.jpg</text>
+  <rect x="0.5" y="0.5" width="899" height="599" stroke="#2A2622" stroke-width="1" fill="none"/>
+</svg>

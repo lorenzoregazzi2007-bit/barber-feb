@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" fill="none">
+  <!-- PLACEHOLDER: sostituire con foto-barber-feb.jpg -->
+  <rect width="480" height="600" fill="#171512"/>
+  
+  <!-- Silhouette busto -->
+  <ellipse cx="240" cy="220" rx="72" ry="80" fill="#2A2622"/>
+  <path d="M 100 600 Q 100 400 180 360 Q 210 348 240 346 Q 270 348 300 360 Q 380 400 380 600 Z" fill="#2A2622"/>
+  
+  <!-- Label -->
+  <rect x="100" y="520" width="280" height="48" rx="2" fill="#0D0C0B" opacity="0.8"/>
+  <text x="240" y="541" font-family="monospace" font-size="11" fill="#8C8378" text-anchor="middle" letter-spacing="2">FOTO DA INSERIRE</text>
+  <text x="240" y="557" font-family="monospace" font-size="9" fill="#B08D57" text-anchor="middle" letter-spacing="1">foto-barber-feb.jpg</text>
+  
+  <!-- Bordo sottile ottone -->
+  <rect x="0.5" y="0.5" width="479" height="599" stroke="#2A2622" stroke-width="1" fill="none"/>
+  <rect x="8" y="8" width="464" height="584" stroke="#B08D57" stroke-width="0.5" stroke-dasharray="4 8" fill="none" opacity="0.3"/>
+</svg>
