@@ -1,5 +1,5 @@
 /* ============================================================
-   BARBER FEB — style.css (ONYX BARBERS LUXURY AESTHETIC v4.0)
+   BARBER FEB — style.css (ONYX BARBERS LUXURY AESTHETIC v4.1)
    Monochrome Pitch Black · White · Plant Green Accents
    ============================================================ */
 
@@ -76,8 +76,8 @@ img {
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 12px 28px;
-  border-radius: 3px;
+  padding: 14px 30px;
+  border-radius: 4px;
   border: 1px solid #ffffff;
   cursor: pointer;
   transition: var(--transition);
@@ -101,8 +101,8 @@ img {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 12px 28px;
-  border-radius: 3px;
+  padding: 14px 30px;
+  border-radius: 4px;
   border: 1px solid #333333;
   cursor: pointer;
   transition: var(--transition);
@@ -296,7 +296,7 @@ img {
 }
 
 /* ============================================================
-   HERO SECTION (Exact Onyx Barbers Layout)
+   HERO SECTION (Title Together + Text Below)
    ============================================================ */
 .hero-section {
   padding-top: calc(var(--header-height) + 40px);
@@ -318,14 +318,17 @@ img {
   justify-content: space-between;
 }
 
-.hero-title-main {
-  font-size: 4.8rem;
+.hero-title-group {
+  margin-bottom: 20px;
+}
+
+.hero-title-combined {
+  font-size: 4.5rem;
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -1px;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 24px;
 }
 
 .hero-description {
@@ -335,17 +338,7 @@ img {
   letter-spacing: 1px;
   color: var(--text-muted);
   text-transform: uppercase;
-  max-width: 520px;
-  margin-bottom: 32px;
-}
-
-.hero-title-sub {
-  font-size: 4.2rem;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
+  max-width: 540px;
   margin-bottom: 40px;
 }
 
@@ -401,7 +394,7 @@ img {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  max-height: 420px;
+  max-height: 440px;
 }
 
 .hero-bottom-banner img {
@@ -411,7 +404,7 @@ img {
 }
 
 /* ============================================================
-   ABOUT US SECTION (Exact Onyx Barbers Collage Layout)
+   ABOUT US SECTION
    ============================================================ */
 .about-section {
   padding: 100px 0;
@@ -488,7 +481,7 @@ img {
 }
 
 /* ============================================================
-   OUR SERVICES SECTION (Exact Onyx Barbers Table List)
+   OUR SERVICES SECTION
    ============================================================ */
 .services-section {
   padding: 100px 0;
@@ -683,7 +676,7 @@ img {
 }
 
 /* ============================================================
-   SCHEDULE SECTION (Exact Onyx Barbers Schedule UI)
+   TAKE CARE APP CARD WIDGET
    ============================================================ */
 .schedule-section {
   padding: 100px 0;
@@ -701,74 +694,93 @@ img {
 .schedule-left-panel {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.panel-subtitle {
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: var(--accent-green);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.panel-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.panel-desc {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 36px;
-}
-
-.time-slots-wrapper {
+.takecare-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 24px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.slots-label {
+.takecare-badge {
+  display: inline-block;
   font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   letter-spacing: 1.5px;
-  color: var(--text-muted);
+  color: var(--accent-green);
+  margin-bottom: 12px;
+}
+
+.takecare-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.1;
   margin-bottom: 16px;
 }
 
-.slots-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+.takecare-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
 }
 
-.time-slot {
+.takecare-quick-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.quick-label {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #1a1a1a;
-  border: 1px solid var(--border-light);
-  padding: 10px;
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: var(--transition);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
 }
 
-.time-slot:hover, .time-slot.active {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+.takecare-select {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.takecare-select:focus {
+  border-color: var(--accent-green);
+}
+
+.takecare-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #dddddd;
+}
+
+.takecare-btn {
+  width: 100%;
 }
 
 /* Hours Card */
@@ -776,7 +788,7 @@ img {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 32px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1067,12 +1079,8 @@ img {
     grid-template-columns: 1fr;
   }
   
-  .hero-title-main {
+  .hero-title-combined {
     font-size: 3.2rem;
-  }
-
-  .hero-title-sub {
-    font-size: 2.8rem;
   }
 
   .service-row-item {
