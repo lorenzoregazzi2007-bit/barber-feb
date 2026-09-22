@@ -1,11 +1,11 @@
 /* ============================================================
-   BARBER FEB — style.css (ONYX BARBERS LUXURY AESTHETIC v4.3)
+   BARBER FEB — style.css (MOBILE & DESKTOP LUXURY v5.0)
    Monochrome Pitch Black · White · Plant Green Accents
    ============================================================ */
 
 /* RESET & CORE VARIABLES */
 :root {
-  --bg-dark: #0a0a0a;
+  --bg-dark: #080808;
   --bg-card: #121212;
   --bg-card-hover: #181818;
   --text-main: #ffffff;
@@ -236,8 +236,8 @@ img {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(10, 10, 10, 0.92);
-  backdrop-filter: blur(10px);
+  background-color: rgba(8, 8, 8, 0.94);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   display: flex;
@@ -286,17 +286,19 @@ img {
   border: none;
   cursor: pointer;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
+  padding: 4px;
 }
 
 .hamburger-btn span {
   width: 24px;
   height: 2px;
   background-color: #ffffff;
+  transition: var(--transition);
 }
 
 /* ============================================================
-   HERO SECTION (Title Together + Text Below)
+   HERO SECTION
    ============================================================ */
 .hero-section {
   padding-top: calc(var(--header-height) + 40px);
@@ -648,7 +650,6 @@ img {
   object-fit: cover;
 }
 
-/* Slider Arrows on Cards */
 .slider-arrow {
   position: absolute;
   top: 45%;
@@ -678,7 +679,6 @@ img {
   border-color: #ffffff;
 }
 
-/* Dots Indicator */
 .slider-dots {
   position: absolute;
   bottom: 64px;
@@ -1031,7 +1031,7 @@ img {
 }
 
 /* ============================================================
-   LIGHTBOX MODAL (Multi-Angle View Slider)
+   LIGHTBOX MODAL
    ============================================================ */
 .lightbox-modal {
   position: fixed;
@@ -1039,7 +1039,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(16px);
   z-index: 10000;
   display: flex;
@@ -1060,20 +1060,20 @@ img {
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 12px;
-  padding: 36px;
-  max-width: 550px;
+  padding: 32px;
+  max-width: 500px;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.9);
 }
 
 .lightbox-close-btn {
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 14px;
+  right: 18px;
   background: none;
   border: none;
   color: #ffffff;
@@ -1082,7 +1082,7 @@ img {
 }
 
 .lightbox-item-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1090,7 +1090,7 @@ img {
 
 .angle-tabs {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   background-color: #1a1a1a;
   padding: 4px;
   border-radius: 6px;
@@ -1101,9 +1101,9 @@ img {
   border: none;
   color: var(--text-muted);
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 4px;
   cursor: pointer;
   transition: var(--transition);
@@ -1134,13 +1134,13 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -1150,8 +1150,8 @@ img {
   transition: var(--transition);
 }
 
-.modal-slider-nav.prev { left: 12px; }
-.modal-slider-nav.next { right: 12px; }
+.modal-slider-nav.prev { left: 10px; }
+.modal-slider-nav.next { right: 10px; }
 
 .modal-slider-nav:hover {
   background-color: #ffffff;
@@ -1162,35 +1162,307 @@ img {
   width: 100%;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .hero-top-grid, .about-grid, .schedule-grid, .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-title-combined {
-    font-size: 3.2rem;
+/* ============================================================
+   RESPONSIVE DESIGN (OPTIMIZED FOR PHONES & TABLETS v5.0)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 0 16px;
   }
 
-  .service-row-item {
-    grid-template-columns: 60px 1fr 100px;
+  .section-title {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
   }
 
-  .service-action {
-    grid-column: span 3;
-    justify-content: stretch;
-    margin-top: 12px;
+  .section-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
   }
 
-  .btn-service-book {
-    width: 100%;
+  /* Header Mobile */
+  .site-header {
+    height: 64px;
   }
 
-  .main-nav {
-    display: none;
+  .brand-logo {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .header-cta {
+    padding: 8px 16px;
+    font-size: 0.7rem;
   }
 
   .hamburger-btn {
     display: flex;
+  }
+
+  /* Mobile Drawer Nav */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: rgba(12, 12, 12, 0.98);
+    backdrop-filter: blur(16px);
+    border-left: 1px solid var(--border-color);
+    padding: 80px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .main-nav.active {
+    right: 0;
+  }
+
+  .main-nav .nav-menu {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  /* Hero Mobile */
+  .hero-section {
+    padding-top: 84px;
+    padding-bottom: 40px;
+  }
+
+  .hero-top-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hero-title-combined {
+    font-size: 2.2rem;
+    line-height: 1.05;
+    letter-spacing: 0px;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+  }
+
+  .hero-right-image {
+    height: 260px;
+    border-radius: 8px;
+  }
+
+  /* Hide massive banner on mobile to avoid long bloated scroll */
+  .hero-bottom-banner {
+    display: none;
+  }
+
+  /* About Us Mobile */
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-images-collage {
+    min-height: 240px;
+  }
+
+  .collage-bg-card {
+    width: 100%;
+    height: 240px;
+  }
+
+  .collage-overlay-card {
+    display: none;
+  }
+
+  .about-lead {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .about-body {
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+
+  /* Services Mobile */
+  .services-section {
+    padding: 50px 0;
+  }
+
+  .service-row-item {
+    grid-template-columns: 54px 1fr auto;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .service-thumb {
+    width: 54px;
+    height: 54px;
+    border-radius: 6px;
+  }
+
+  .service-name {
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  .service-desc {
+    font-size: 0.72rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .service-meta {
+    align-items: flex-end;
+  }
+
+  .service-duration {
+    font-size: 0.65rem;
+  }
+
+  .service-price {
+    font-size: 1.05rem;
+  }
+
+  .service-action {
+    grid-column: span 3;
+    margin-top: 8px;
+  }
+
+  .btn-service-book {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Gallery Mobile (2 Columns Instagram style) */
+  .gallery-section {
+    padding: 50px 0;
+  }
+
+  .filter-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    padding: 8px 14px;
+    font-size: 0.7rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card-image-wrap {
+    aspect-ratio: 3/4;
+  }
+
+  .slider-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+
+  .prev-arrow { left: 6px; }
+  .next-arrow { right: 6px; }
+
+  .slider-dots {
+    bottom: 50px;
+    gap: 4px;
+  }
+
+  .slider-dots .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .slider-dots .dot.active {
+    width: 12px;
+  }
+
+  .card-overlay {
+    padding: 10px;
+  }
+
+  .card-badge {
+    font-size: 0.52rem;
+    letter-spacing: 0.5px;
+  }
+
+  .card-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* Schedule / TakeCare Mobile */
+  .schedule-section {
+    padding: 50px 0;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .takecare-card, .hours-card {
+    padding: 24px 18px;
+  }
+
+  .takecare-title {
+    font-size: 1.4rem;
+  }
+
+  .takecare-desc {
+    font-size: 0.78rem;
+    margin-bottom: 20px;
+  }
+
+  .hours-list li {
+    font-size: 0.78rem;
+  }
+
+  /* Contact & Map Mobile */
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-map-col {
+    height: 280px;
   }
 }

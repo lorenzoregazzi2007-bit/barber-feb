@@ -1,8 +1,27 @@
 /* ============================================================
-   BARBER FEB — script.js (ONYX BARBERS MULTI-ANGLE CAROUSEL v4.3)
+   BARBER FEB — script.js (MOBILE & DESKTOP LUXURY INTERACTION v5.0)
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ------------------------------------------------------------
+     0. MOBILE HAMBURGER MENU TOGGLE
+     ------------------------------------------------------------ */
+  const hamburgerBtn = document.getElementById('hamburger-toggle');
+  const mainNav = document.getElementById('navbar');
+
+  if (hamburgerBtn && mainNav) {
+    hamburgerBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking links inside
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+      });
+    });
+  }
 
   /* ------------------------------------------------------------
      1. COOKIE BANNER (GDPR)
@@ -97,14 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevents opening modal when clicking arrow
+        e.stopPropagation();
         updateCardSlider(currentIndex - 1);
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevents opening modal when clicking arrow
+        e.stopPropagation();
         updateCardSlider(currentIndex + 1);
       });
     }
@@ -115,6 +134,30 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCardSlider(idx);
       });
     });
+
+    // Touch Swipe Support for Mobile Phones
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    card.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    card.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          updateCardSlider(currentIndex + 1); // Swipe left
+        } else {
+          updateCardSlider(currentIndex - 1); // Swipe right
+        }
+      }
+    }
 
     // Click on card body opens Modal at current angle
     card.addEventListener('click', (e) => {
