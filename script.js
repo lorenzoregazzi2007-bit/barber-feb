@@ -1,244 +1,313 @@
 /**
- * BARBER FEB — script.js
- * ============================================================
- * CONFIGURAZIONE RAPIDA — modifica solo questa sezione
- * ============================================================
+ * BARBER FEB — script.js  v2.0
+ * Nav · Scroll Reveal · Cookie Consent · Work Modal (multi-angolazione) · WhatsApp
  */
-const BOOKING_URL = 'https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um';
-const INSTAGRAM_URL = 'https://instagram.com/barber_feb';
+
+'use strict';
 
 /* ============================================================
-   NAVIGATION — sticky + mobile menu
+   NAV — sticky scroll
    ============================================================ */
 const nav = document.getElementById('nav');
-const hamburger = document.getElementById('nav-hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
-// Nav: diventa opaca dopo 50px di scroll
 function updateNav() {
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 }
-
 window.addEventListener('scroll', updateNav, { passive: true });
-updateNav(); // check on load
+updateNav();
 
-// Hamburger toggle
-function openMobileMenu() {
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+const hamburger       = document.getElementById('nav-hamburger');
+const mobileMenu      = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const mobileLinks     = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+function openMobile() {
   mobileMenu.classList.add('open');
   hamburger.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
-  // Focus primo link
-  const firstLink = mobileMenu.querySelector('a');
-  if (firstLink) firstLink.focus();
+  mobileMenuClose && mobileMenuClose.focus();
 }
-
-function closeMobileMenu() {
+function closeMobile() {
   mobileMenu.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
   hamburger.focus();
 }
 
-hamburger.addEventListener('click', () => {
-  if (mobileMenu.classList.contains('open')) {
-    closeMobileMenu();
-  } else {
-    openMobileMenu();
-  }
-});
+hamburger && hamburger.addEventListener('click', () =>
+  mobileMenu.classList.contains('open') ? closeMobile() : openMobile()
+);
+mobileMenuClose && mobileMenuClose.addEventListener('click', closeMobile);
+mobileLinks.forEach(l => l.addEventListener('click', closeMobile));
 
-// Chiudi mobile menu quando si clicca un link
-mobileMenuLinks.forEach(link => {
-  link.addEventListener('click', closeMobileMenu);
-});
-
-// Chiudi con ESC
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    if (mobileMenu.classList.contains('open')) closeMobileMenu();
-    if (document.getElementById('lightbox').classList.contains('open')) closeLightbox();
+    if (mobileMenu && mobileMenu.classList.contains('open')) closeMobile();
+    if (document.getElementById('work-modal') &&
+        document.getElementById('work-modal').classList.contains('open')) closeModal();
   }
 });
 
 /* ============================================================
-   SCROLL REVEAL — IntersectionObserver per .reveal e .sig-line
+   SCROLL REVEAL — IntersectionObserver
    ============================================================ */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
+const revealObs = new IntersectionObserver(
+  entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+        revealObs.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.12 }
 );
 
-const sigLineObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('drawn');
-        sigLineObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.8 }
-);
-
-// Aggiunge delay progressivo agli elementi .reveal dentro lo stesso parent
-document.querySelectorAll('.reveal').forEach((el, i) => {
-  // Calcola delay relativo al gruppo (resetta per ogni sezione)
+document.querySelectorAll('.reveal').forEach((el, _i) => {
   const siblings = el.parentElement.querySelectorAll('.reveal');
-  const indexInGroup = Array.from(siblings).indexOf(el);
-  el.style.setProperty('--reveal-delay', `${indexInGroup * 80}ms`);
-  revealObserver.observe(el);
-});
-
-// Signature lines (eccetto quella nell'hero, che è animata via CSS)
-document.querySelectorAll('.sig-line:not(.hero .sig-line)').forEach(line => {
-  sigLineObserver.observe(line);
+  const idx = Array.from(siblings).indexOf(el);
+  el.style.setProperty('--reveal-delay', `${idx * 80}ms`);
+  revealObs.observe(el);
 });
 
 /* ============================================================
-   BOOKING LINKS — inietta BOOKING_URL in tutti i link prenotazione
-   ============================================================ */
-document.querySelectorAll('[data-booking]').forEach(el => {
-  el.href = BOOKING_URL;
-});
-
-document.querySelectorAll('[data-instagram]').forEach(el => {
-  el.href = INSTAGRAM_URL;
-});
-
-/* ============================================================
-   ANNO CORRENTE nel footer
-   ============================================================ */
-const yearEl = document.getElementById('footer-year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-/* ============================================================
-   LIGHTBOX — galleria fotografica
-   ============================================================ */
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxClose = document.getElementById('lightbox-close');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
-const lightboxCounter = document.getElementById('lightbox-counter');
-
-// Raccoglie tutte le immagini della galleria
-const galleryItems = Array.from(document.querySelectorAll('.gallery-item img'));
-let currentLightboxIndex = 0;
-
-function openLightbox(index) {
-  currentLightboxIndex = index;
-  const img = galleryItems[index];
-  lightboxImg.src = img.src;
-  lightboxImg.alt = img.alt || `Lavoro ${index + 1}`;
-  updateLightboxCounter();
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  lightboxClose.focus();
-}
-
-function closeLightbox() {
-  lightbox.classList.remove('open');
-  document.body.style.overflow = '';
-  // Restituisce focus all'elemento che ha aperto il lightbox
-  const currentFigure = document.querySelectorAll('.gallery-item')[currentLightboxIndex];
-  if (currentFigure) currentFigure.focus();
-}
-
-function showLightboxImage(index) {
-  const total = galleryItems.length;
-  currentLightboxIndex = (index + total) % total;
-  const img = galleryItems[currentLightboxIndex];
-  
-  // Fade out, cambia src, fade in
-  lightboxImg.style.opacity = '0';
-  setTimeout(() => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt || `Lavoro ${currentLightboxIndex + 1}`;
-    lightboxImg.style.opacity = '1';
-  }, 150);
-  
-  updateLightboxCounter();
-}
-
-function updateLightboxCounter() {
-  if (lightboxCounter) {
-    lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${galleryItems.length}`;
-  }
-}
-
-// Transizione opacity per lightbox img
-if (lightboxImg) {
-  lightboxImg.style.transition = 'opacity 150ms ease';
-}
-
-// Aggiungi click listener a ogni item della galleria
-document.querySelectorAll('.gallery-item').forEach((item, index) => {
-  item.addEventListener('click', () => openLightbox(index));
-  // Accessibilità: apertura con tastiera
-  item.setAttribute('tabindex', '0');
-  item.setAttribute('role', 'button');
-  item.setAttribute('aria-label', `Apri foto ${index + 1} in ingrandimento`);
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      openLightbox(index);
-    }
-  });
-});
-
-lightboxClose.addEventListener('click', closeLightbox);
-lightboxPrev.addEventListener('click', () => showLightboxImage(currentLightboxIndex - 1));
-lightboxNext.addEventListener('click', () => showLightboxImage(currentLightboxIndex + 1));
-
-// Click fuori dall'immagine chiude il lightbox
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-// Swipe su mobile
-let touchStartX = 0;
-lightbox.addEventListener('touchstart', e => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
-
-lightbox.addEventListener('touchend', e => {
-  const delta = e.changedTouches[0].screenX - touchStartX;
-  if (Math.abs(delta) > 50) {
-    if (delta < 0) showLightboxImage(currentLightboxIndex + 1); // swipe sx
-    else showLightboxImage(currentLightboxIndex - 1); // swipe dx
-  }
-}, { passive: true });
-
-// Navigazione con frecce tastiera nel lightbox
-document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'ArrowLeft') showLightboxImage(currentLightboxIndex - 1);
-  if (e.key === 'ArrowRight') showLightboxImage(currentLightboxIndex + 1);
-});
-
-/* ============================================================
-   SMOOTH SCROLL per link anchor
+   SMOOTH SCROLL per anchor link
    ============================================================ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const navHeight = nav.offsetHeight;
-      const targetY = target.getBoundingClientRect().top + window.scrollY - navHeight;
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
+      const offset = nav ? nav.offsetHeight : 0;
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   });
 });
+
+/* ============================================================
+   ANNO FOOTER
+   ============================================================ */
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ============================================================
+   COOKIE CONSENT — GDPR / D.Lgs. 196/2003
+   Salva la scelta in localStorage per 6 mesi.
+   ============================================================ */
+const COOKIE_KEY      = 'barberfeb_cookie_consent';
+const COOKIE_EXPIRY   = 180; // giorni
+const banner          = document.getElementById('cookie-banner');
+const btnAccept       = document.getElementById('cookie-accept');
+const btnReject       = document.getElementById('cookie-reject');
+
+function cookieConsentStored() {
+  try {
+    const raw = localStorage.getItem(COOKIE_KEY);
+    if (!raw) return false;
+    const { ts } = JSON.parse(raw);
+    const days = (Date.now() - ts) / 86400000;
+    return days < COOKIE_EXPIRY;
+  } catch { return false; }
+}
+
+function storeCookieConsent(value) {
+  try {
+    localStorage.setItem(COOKIE_KEY, JSON.stringify({ value, ts: Date.now() }));
+  } catch {}
+}
+
+function hideBanner() {
+  if (!banner) return;
+  banner.classList.remove('visible');
+  banner.setAttribute('aria-hidden', 'true');
+}
+
+function showBanner() {
+  if (!banner) return;
+  // Mostra dopo breve delay per UX
+  setTimeout(() => {
+    banner.classList.add('visible');
+    banner.removeAttribute('aria-hidden');
+  }, 1200);
+}
+
+if (!cookieConsentStored()) {
+  showBanner();
+} else {
+  if (banner) banner.style.display = 'none';
+}
+
+btnAccept && btnAccept.addEventListener('click', () => {
+  storeCookieConsent('accepted');
+  hideBanner();
+  // Qui si possono attivare analytics opzionali se presenti
+});
+
+btnReject && btnReject.addEventListener('click', () => {
+  storeCookieConsent('rejected');
+  hideBanner();
+});
+
+/* ============================================================
+   WORK MODAL — lightbox multi-angolazione
+   ============================================================ */
+const modal         = document.getElementById('work-modal');
+const modalInner    = modal ? modal.querySelector('.work-modal-inner') : null;
+const modalClose    = document.getElementById('modal-close');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalMainImg  = document.getElementById('modal-main-img');
+const modalPrev     = document.getElementById('modal-prev');
+const modalNext     = document.getElementById('modal-next');
+const modalAngle    = document.getElementById('modal-angle-label');
+const modalCategory = document.getElementById('modal-category');
+const modalTitle    = document.getElementById('modal-title');
+const modalThumbs   = document.getElementById('modal-thumbs');
+
+let currentAngles  = [];
+let currentLabels  = [];
+let currentAngleIdx = 0;
+let lastFocusEl    = null;
+
+function openModal(card) {
+  if (!modal || !card) return;
+
+  // Leggi dati dalla card
+  try {
+    currentAngles = JSON.parse(card.dataset.angles || '[]');
+    currentLabels = JSON.parse(card.dataset.labels || '[]');
+  } catch {
+    currentAngles = [];
+    currentLabels = [];
+  }
+
+  const category = card.dataset.category || '';
+  const index    = card.dataset.index || '0';
+
+  if (modalCategory) modalCategory.textContent = category;
+  if (modalTitle)    modalTitle.textContent     = `Lavoro ${String(parseInt(index) + 1).padStart(2, '0')}`;
+
+  // Popola thumbnails
+  if (modalThumbs) {
+    modalThumbs.innerHTML = '';
+    currentAngles.forEach((src, i) => {
+      const thumb = document.createElement('button');
+      thumb.className = 'modal-thumb' + (i === 0 ? ' active' : '');
+      thumb.setAttribute('role', 'listitem');
+      thumb.setAttribute('tabindex', '0');
+      thumb.setAttribute('aria-label', currentLabels[i] || `Angolazione ${i + 1}`);
+      thumb.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+
+      const img = document.createElement('img');
+      img.src     = src;
+      img.alt     = currentLabels[i] || `Angolazione ${i + 1}`;
+      img.loading = 'lazy';
+
+      const label = document.createElement('span');
+      label.className = 'modal-thumb-label';
+      label.textContent = currentLabels[i] || `${i + 1}`;
+
+      thumb.appendChild(img);
+      thumb.appendChild(label);
+      thumb.addEventListener('click', () => setAngle(i));
+      modalThumbs.appendChild(thumb);
+    });
+  }
+
+  currentAngleIdx = 0;
+  setAngle(0, false); // senza transizione alla prima apertura
+
+  // Mostra modal
+  lastFocusEl = document.activeElement;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modalClose && modalClose.focus();
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  lastFocusEl && lastFocusEl.focus();
+}
+
+function setAngle(idx, animated = true) {
+  if (!currentAngles.length) return;
+  const total = currentAngles.length;
+  currentAngleIdx = ((idx % total) + total) % total;
+
+  if (modalMainImg) {
+    if (animated) {
+      modalMainImg.style.opacity = '0';
+      setTimeout(() => {
+        modalMainImg.src = currentAngles[currentAngleIdx];
+        modalMainImg.alt = currentLabels[currentAngleIdx] || `Angolazione ${currentAngleIdx + 1}`;
+        modalMainImg.style.opacity = '1';
+      }, 180);
+    } else {
+      modalMainImg.src = currentAngles[currentAngleIdx];
+      modalMainImg.alt = currentLabels[currentAngleIdx] || `Angolazione ${currentAngleIdx + 1}`;
+      modalMainImg.style.opacity = '1';
+    }
+  }
+
+  if (modalAngle) {
+    modalAngle.textContent = currentLabels[currentAngleIdx] || `${currentAngleIdx + 1} / ${total}`;
+  }
+
+  // Aggiorna thumbnails
+  if (modalThumbs) {
+    const thumbs = modalThumbs.querySelectorAll('.modal-thumb');
+    thumbs.forEach((t, i) => {
+      t.classList.toggle('active', i === currentAngleIdx);
+      t.setAttribute('aria-pressed', i === currentAngleIdx ? 'true' : 'false');
+    });
+    // Scroll thumbnail in view
+    const activeThumb = thumbs[currentAngleIdx];
+    if (activeThumb) activeThumb.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+}
+
+// Transizione opacity main img
+if (modalMainImg) {
+  modalMainImg.style.transition = 'opacity 180ms ease';
+}
+
+// Apri modal da click su card
+document.querySelectorAll('.work-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card));
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openModal(card);
+    }
+  });
+});
+
+// Frecce navigazione angolazione
+modalPrev     && modalPrev.addEventListener('click', () => setAngle(currentAngleIdx - 1));
+modalNext     && modalNext.addEventListener('click', () => setAngle(currentAngleIdx + 1));
+modalClose    && modalClose.addEventListener('click', closeModal);
+modalBackdrop && modalBackdrop.addEventListener('click', closeModal);
+
+// Tasti freccia nel modal
+document.addEventListener('keydown', e => {
+  if (!modal || !modal.classList.contains('open')) return;
+  if (e.key === 'ArrowLeft')  setAngle(currentAngleIdx - 1);
+  if (e.key === 'ArrowRight') setAngle(currentAngleIdx + 1);
+});
+
+// Swipe su touch
+let touchStartX = 0;
+modal && modal.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+modal && modal.addEventListener('touchend', e => {
+  const delta = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(delta) > 50) {
+    setAngle(delta < 0 ? currentAngleIdx + 1 : currentAngleIdx - 1);
+  }
+}, { passive: true });

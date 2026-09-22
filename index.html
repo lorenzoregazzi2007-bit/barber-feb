@@ -4,59 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ============================================================
-       SEO — Meta tag base
-       ============================================================ -->
+  <!-- SEO -->
   <title>Barber Feb — Barbiere a Minerbio (BO)</title>
-  <meta name="description" content="Barber Feb è il barbiere di riferimento a Minerbio, in provincia di Bologna. Taglio uomo, barba, rasatura a rasoio. Via Canaletto 1. Prenota online." />
-  <meta name="keywords" content="barbiere Minerbio, barber Minerbio, taglio uomo Bologna, Barber Feb, barbiere San Giorgio di Piano, barbiere Baricella" />
+  <meta name="description" content="Barber Feb è il barbiere di riferimento a Minerbio, in provincia di Bologna. Taglio uomo, barba, rasatura a rasoio. Via Giusta, Minerbio. Prenota online con Take Care." />
+  <meta name="keywords" content="barbiere Minerbio, barber Minerbio, taglio uomo Bologna, Barber Feb, barba rasoio Bologna" />
   <meta name="author" content="Barber Feb" />
+  <link rel="canonical" href="https://lorenzoregazzi2007-bit.github.io/barber-feb/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Barber Feb — Barbiere a Minerbio (BO)" />
-  <meta property="og:description" content="Taglio di qualità a Minerbio. Senza fronzoli, senza attese inutili. Prenota il tuo taglio online." />
+  <meta property="og:description" content="Taglio e barba di qualità a Minerbio. Prenota online con Take Care." />
   <meta property="og:locale" content="it_IT" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- ============================================================
-       GOOGLE FONTS — font-display: swap per performance
-       ============================================================ -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ============================================================
+       COOKIE BANNER — GDPR / D.Lgs. 196/2003 e Reg. UE 2016/679
+       ============================================================ -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="false" aria-label="Informativa sui cookie" aria-live="polite">
+    <div class="cookie-banner-inner">
+      <div class="cookie-text">
+        <p class="cookie-title">Utilizziamo i cookie</p>
+        <p class="cookie-body">
+          Questo sito usa solo cookie tecnici strettamente necessari al suo funzionamento. Non utilizziamo cookie di profilazione o di marketing. Per saperne di più leggi la nostra
+          <a href="cookie.html" target="_blank" rel="noopener" class="cookie-link">Cookie Policy</a>
+          e la
+          <a href="privacy.html" target="_blank" rel="noopener" class="cookie-link">Privacy Policy</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept" aria-label="Accetta cookie tecnici">Accetto</button>
+        <button id="cookie-reject" class="cookie-btn cookie-btn-reject" aria-label="Rifiuta cookie facoltativi">Rifiuto</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+       ============================================================ -->
+  <a
+    href="https://wa.me/393339928198"
+    id="whatsapp-fab"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contattaci su WhatsApp"
+    title="Scrivici su WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
   <!-- ============================================================
        NAVIGATION
        ============================================================ -->
   <nav id="nav" role="navigation" aria-label="Navigazione principale">
     <div class="nav-inner">
-      <a href="#hero" class="nav-brand" aria-label="Barber Feb — torna in cima">Barber Feb</a>
+
+      <a href="#hero" class="nav-brand" aria-label="Barber Feb — torna in cima">
+        <span class="nav-logo-b" aria-hidden="true">B</span>
+        <span class="nav-logo-text">arber Feb</span>
+      </a>
 
       <ul class="nav-links" role="list">
-        <li><a href="#chi-siamo">Chi sono</a></li>
-        <li><a href="#servizi">Servizi</a></li>
-        <li><a href="#galleria">Galleria</a></li>
-        <li><a href="#dove-siamo">Dove siamo</a></li>
+        <li><a href="#taglio">Taglio</a></li>
+        <li><a href="#barba">Barba</a></li>
+        <li><a href="#prezzi">Prezzi</a></li>
+        <li><a href="#info">Info</a></li>
       </ul>
 
       <a
-        href="#"
+        href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
         class="btn-primary nav-cta"
-        data-booking
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Prenota il tuo taglio — apre app prenotazioni"
+        aria-label="Prenota il tuo taglio — apre app Take Care"
+        id="nav-prenota-btn"
       >Prenota</a>
 
       <button
@@ -77,18 +112,19 @@
        MOBILE MENU OVERLAY
        ============================================================ -->
   <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu di navigazione">
+    <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Chiudi menu">✕</button>
     <ul class="mobile-menu-links" role="list">
-      <li><a href="#chi-siamo">Chi sono</a></li>
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#galleria">Galleria</a></li>
-      <li><a href="#dove-siamo">Dove siamo</a></li>
+      <li><a href="#taglio">Taglio</a></li>
+      <li><a href="#barba">Barba</a></li>
+      <li><a href="#prezzi">Prezzi</a></li>
+      <li><a href="#info">Info</a></li>
     </ul>
     <a
-      href="#"
+      href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
       class="btn-primary"
-      data-booking
       target="_blank"
       rel="noopener noreferrer"
+      id="mobile-prenota-btn"
     >Prenota il tuo taglio <span class="btn-arrow">↗</span></a>
   </div>
 
@@ -97,150 +133,222 @@
        SEZIONE 1 — HERO
        ============================================================ -->
   <section id="hero" aria-label="Hero — Barber Feb">
+    <!-- Grain texture -->
+    <div class="hero-grain" aria-hidden="true"></div>
 
-    <!-- SVG Rasoio a mano libera — elemento decorativo -->
-    <svg
-      class="hero-razor"
-      viewBox="0 0 280 200"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <!-- Lama del rasoio -->
-      <path
-        d="M 30 130 L 220 48 L 252 80 L 220 112 Z"
-        stroke="#B08D57"
-        stroke-width="1.2"
-        fill="none"
-        stroke-linejoin="round"
-      />
-      <!-- Taglio/filo della lama -->
-      <line
-        x1="50" y1="118"
-        x2="252" y2="80"
-        stroke="#B08D57"
-        stroke-width="0.6"
-        opacity="0.5"
-      />
-      <!-- Manico del rasoio -->
-      <path
-        d="M 30 130 L 30 156 Q 24 168 36 165 L 58 152 L 58 130 Z"
-        stroke="#B08D57"
-        stroke-width="1.2"
-        fill="none"
-        stroke-linejoin="round"
-      />
-      <!-- Perno del manico -->
-      <circle cx="44" cy="148" r="4" stroke="#B08D57" stroke-width="1" fill="none" />
-      <!-- Rifinitura punta lama -->
-      <path
-        d="M 220 48 L 252 64 L 252 80"
-        stroke="#B08D57"
-        stroke-width="0.8"
-        fill="none"
-        stroke-linejoin="round"
-        opacity="0.6"
-      />
-    </svg>
+    <!-- Decorative large B -->
+    <div class="hero-bg-letter" aria-hidden="true">B</div>
 
     <div class="hero-inner">
       <div class="hero-content">
-        <!-- Signature line — si traccia via CSS animation al caricamento -->
-        <div class="sig-line" aria-hidden="true"></div>
+        <div class="hero-eyebrow reveal-hero">
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span>Minerbio · Bologna</span>
+        </div>
 
         <h1 class="hero-title">
-          <span class="word-barber">Barber</span>
-          <span class="word-feb">Feb</span>
+          <span class="word-barber reveal-hero">Barber</span>
+          <span class="word-feb reveal-hero">Feb</span>
         </h1>
 
-        <p class="hero-tagline">
-          Taglio di qualità a Minerbio.<br />
-          Senza fronzoli, senza attese inutili.
+        <p class="hero-tagline reveal-hero">
+          Taglio preciso. Barba curata.<br />
+          Nessun compromesso.
         </p>
 
-        <div class="hero-cta">
+        <div class="hero-cta reveal-hero">
           <a
-            href="#"
+            href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
             class="btn-primary"
-            data-booking
             target="_blank"
             rel="noopener noreferrer"
             id="hero-cta-btn"
           >
-            Prenota il tuo taglio <span class="btn-arrow">↗</span>
+            Prenota ora <span class="btn-arrow">↗</span>
           </a>
+          <a href="#taglio" class="btn-ghost">Scopri i lavori</a>
         </div>
       </div>
 
-      <div class="hero-location" aria-label="Indirizzo">
-        <div class="hero-location-dot" aria-hidden="true"></div>
-        <span class="hero-location-text">Via Canaletto 1 — Minerbio, Bologna</span>
+      <div class="hero-meta reveal-hero" aria-label="Informazioni rapide">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Via</span>
+          <span class="hero-meta-value">Via Giusta, Minerbio</span>
+        </div>
+        <div class="hero-meta-sep" aria-hidden="true"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Tel</span>
+          <a href="tel:+393339928198" class="hero-meta-value hero-meta-link">333 992 8198</a>
+        </div>
+        <div class="hero-meta-sep" aria-hidden="true"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">App</span>
+          <a
+            href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
+            class="hero-meta-value hero-meta-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Take Care</a>
+        </div>
       </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
-  <div class="section-divider" role="separator" aria-hidden="true"></div>
-
 
   <!-- ============================================================
-       SEZIONE 2 — CHI SIAMO
+       SEZIONE 2 — GALLERIA TAGLIO
        ============================================================ -->
-  <section id="chi-siamo" aria-label="Chi siamo — Il Barber">
+  <section id="taglio" aria-label="Galleria Taglio">
     <div class="section-wrap">
 
       <div class="section-header reveal">
-        <div class="sig-line" aria-hidden="true"></div>
-        <p class="section-label">Il Barber</p>
-        <h2 class="section-title">Chi <em>sono</em></h2>
+        <p class="section-label">Galleria · 01</p>
+        <h2 class="section-title">Il <em>Taglio</em></h2>
+        <p class="section-subtitle reveal">Seleziona una foto per vedere tutte le angolazioni del lavoro.</p>
       </div>
 
-      <div class="chi-siamo-grid">
+      <!--
+        ISTRUZIONI PER AGGIUNGERE FOTO REALI:
+        Ogni .work-card corrisponde a un "lavoro" (es. una persona).
+        Dentro data-angles metti i path alle foto delle angolazioni:
+          data-angles='["assets/taglio/t1-front.jpg","assets/taglio/t1-side.jpg","assets/taglio/t1-back.jpg"]'
+        L'src dell'<img> è la foto principale (thumbnail).
+      -->
+      <div class="works-grid" role="list" aria-label="Lavori di taglio">
 
-        <!-- Foto ritratto -->
-        <!-- DA SOSTITUIRE: rimpiazza il tag <img> con
-             <img src="assets/foto-barber-feb.jpg" alt="Foto di [Nome Barber]" ...>
-             oppure sostituisci direttamente il file foto-barber-feb.svg
-             con foto-barber-feb.jpg nella cartella assets/ -->
-        <div class="chi-siamo-photo-wrap reveal">
-          <img
-            src="assets/foto-barber-feb.svg"
-            alt="Foto del barbiere — da sostituire con foto reale"
-            width="480"
-            height="640"
-            loading="lazy"
-          />
-        </div>
-
-        <!-- Testo -->
-        <div class="chi-siamo-text-wrap">
-          <p class="reveal">
-            Sono Feb. Faccio il barbiere da quando avevo vent'anni, ho imparato
-            sulla sedia — non sui tutorial. A Minerbio conosco quasi tutti i
-            clienti per nome, e questo mi piace.
-          </p>
-          <!-- DA CONFERMARE: testo biografico reale -->
-          <p class="reveal">
-            Il taglio lo faccio bene, la barba la faccio meglio. Nessuna fretta,
-            nessun compromesso sul risultato. Se vuoi qualcosa di preciso — fade,
-            contorno, rasatura con rasoio — sono il posto giusto.
-          </p>
-          <!-- DA CONFERMARE: testo biografico reale -->
-          <p class="reveal">
-            Via Canaletto 1, Minerbio. Prenota online, vieni quando vuoi.
-          </p>
-
-          <!-- Badge specializzazioni — DA CONFERMARE con il barber -->
-          <!-- Rimuovi o personalizza questi badge in base alle specializzazioni reali -->
-          <div class="badge-row reveal">
-            <!-- DA CONFERMARE: specializzazioni reali -->
-            <span class="badge">Fade &amp; Skin Fade</span>
-            <span class="badge">Barba a rasoio</span>
-            <span class="badge">Contorno &amp; Disegni</span>
+        <!-- Lavoro 1 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="0"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale","Posteriore"]'
+             aria-label="Lavoro taglio 1 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 1 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">01</span>
           </div>
         </div>
 
-      </div><!-- /chi-siamo-grid -->
+        <!-- Lavoro 2 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="1"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale sx","Laterale dx","Posteriore"]'
+             aria-label="Lavoro taglio 2 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 2 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">4 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">02</span>
+          </div>
+        </div>
+
+        <!-- Lavoro 3 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="2"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale","Posteriore"]'
+             aria-label="Lavoro taglio 3 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 3 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">03</span>
+          </div>
+        </div>
+
+        <!-- Lavoro 4 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="3"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale","Posteriore"]'
+             aria-label="Lavoro taglio 4 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 4 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">04</span>
+          </div>
+        </div>
+
+        <!-- Lavoro 5 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="4"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale","Posteriore"]'
+             aria-label="Lavoro taglio 5 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 5 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">05</span>
+          </div>
+        </div>
+
+        <!-- Lavoro 6 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="taglio" data-index="5"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale","Posteriore"]'
+             aria-label="Lavoro taglio 6 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Taglio 6 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Taglio</span>
+            <span class="work-card-num">06</span>
+          </div>
+        </div>
+
+      </div><!-- /works-grid -->
+
     </div>
   </section>
 
@@ -248,97 +356,167 @@
 
 
   <!-- ============================================================
-       SEZIONE 3 — SERVIZI E PREZZI
+       SEZIONE 3 — GALLERIA BARBA
        ============================================================ -->
-  <section id="servizi" aria-label="Servizi e listino prezzi">
+  <section id="barba" aria-label="Galleria Barba">
     <div class="section-wrap">
 
       <div class="section-header reveal">
-        <div class="sig-line" aria-hidden="true"></div>
-        <p class="section-label">Listino</p>
-        <h2 class="section-title">I <em>servizi</em></h2>
+        <p class="section-label">Galleria · 02</p>
+        <h2 class="section-title">La <em>Barba</em></h2>
+        <p class="section-subtitle reveal">Ogni lavoro è documentato da più angolazioni. Clicca una foto per vederle tutte.</p>
       </div>
 
-      <!-- Listino "scheda tecnica" con leader dots -->
+      <div class="works-grid" role="list" aria-label="Lavori di barba">
+
+        <!-- Barba 1 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="barba" data-index="0"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale sx","Laterale dx"]'
+             aria-label="Lavoro barba 1 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Barba 1 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Barba</span>
+            <span class="work-card-num">01</span>
+          </div>
+        </div>
+
+        <!-- Barba 2 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="barba" data-index="1"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale sx","Laterale dx"]'
+             aria-label="Lavoro barba 2 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Barba 2 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Barba</span>
+            <span class="work-card-num">02</span>
+          </div>
+        </div>
+
+        <!-- Barba 3 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="barba" data-index="2"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale sx","Laterale dx"]'
+             aria-label="Lavoro barba 3 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Barba 3 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Barba</span>
+            <span class="work-card-num">03</span>
+          </div>
+        </div>
+
+        <!-- Barba 4 -->
+        <div class="work-card reveal" role="listitem" tabindex="0"
+             data-category="barba" data-index="3"
+             data-angles='["assets/placeholder.svg","assets/placeholder.svg","assets/placeholder.svg"]'
+             data-labels='["Frontale","Laterale sx","Laterale dx"]'
+             aria-label="Lavoro barba 4 — clicca per vedere tutte le angolazioni">
+          <div class="work-card-img-wrap">
+            <img src="assets/placeholder.svg" alt="Barba 4 — frontale" loading="lazy" />
+            <div class="work-card-overlay" aria-hidden="true">
+              <span class="work-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span class="work-card-label">3 angolazioni</span>
+            </div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Barba</span>
+            <span class="work-card-num">04</span>
+          </div>
+        </div>
+
+      </div><!-- /works-grid -->
+
+    </div>
+  </section>
+
+  <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+       SEZIONE 4 — PREZZI
+       ============================================================ -->
+  <section id="prezzi" aria-label="Listino prezzi">
+    <div class="section-wrap">
+
+      <div class="section-header reveal">
+        <p class="section-label">Listino</p>
+        <h2 class="section-title">I <em>Prezzi</em></h2>
+      </div>
+
       <ul class="service-list" role="list" aria-label="Listino prezzi Barber Feb">
 
         <li class="service-item reveal">
-          <span class="service-name">Taglio uomo</span>
+          <span class="service-name">Barba con rifinitura a lametta</span>
           <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~30 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price">€ 15</span>
-          </div>
+          <span class="service-price">€ 15</span>
+        </li>
+
+        <li class="service-item reveal">
+          <span class="service-name">Taglio</span>
+          <span class="service-dots" aria-hidden="true"></span>
+          <span class="service-price">€ 15</span>
         </li>
 
         <li class="service-item reveal">
           <span class="service-name">Taglio + Barba</span>
           <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~45 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price">€ 25</span>
-          </div>
-        </li>
-
-        <li class="service-item reveal">
-          <span class="service-name">Barba e rifinitura a lametta</span>
-          <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~30 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price">€ 15</span>
-          </div>
+          <span class="service-price">€ 25</span>
         </li>
 
         <li class="service-item reveal">
           <span class="service-name">Taglio + Shampoo</span>
           <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~40 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price">€ 18</span>
-          </div>
+          <span class="service-price">€ 18</span>
         </li>
 
         <li class="service-item reveal">
           <span class="service-name">Taglio + Trattamento viso + Shampoo</span>
           <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~60 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price">€ 25</span>
-          </div>
+          <span class="service-price">€ 25</span>
         </li>
 
-        <!-- DA CONFERMARE: prezzo e durata taglio bambino -->
-        <li class="service-item reveal">
-          <span class="service-name">Taglio bambino</span>
-          <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">~20 min</span><!-- DA CONFERMARE: durata -->
-            <span class="service-price service-note">su richiesta</span><!-- DA CONFERMARE: prezzo -->
-          </div>
-        </li>
+      </ul>
 
-        <!-- DA CONFERMARE: trattamenti specifici e relativi prezzi -->
-        <li class="service-item reveal">
-          <span class="service-name">Contorno, disegni e trattamenti</span>
-          <span class="service-dots" aria-hidden="true"></span>
-          <div class="service-meta">
-            <span class="service-duration">variabile</span><!-- DA CONFERMARE -->
-            <span class="service-price service-note">su richiesta</span><!-- DA CONFERMARE: prezzo -->
-          </div>
-        </li>
-
-      </ul><!-- /service-list -->
-
-      <div class="servizi-cta reveal">
+      <div class="servizi-note reveal">
+        <p>I prezzi completi e la prenotazione sono disponibili sull'app <strong>Take Care</strong>.</p>
         <a
-          href="#"
+          href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
           class="btn-primary"
-          data-booking
           target="_blank"
           rel="noopener noreferrer"
-          id="servizi-cta-btn"
+          id="prezzi-cta-btn"
+          style="margin-top:1.5rem"
         >
-          Prenota il tuo taglio <span class="btn-arrow">↗</span>
+          Prenota con Take Care <span class="btn-arrow">↗</span>
         </a>
       </div>
 
@@ -349,206 +527,109 @@
 
 
   <!-- ============================================================
-       SEZIONE 4 — GALLERIA LAVORI
+       SEZIONE 5 — INFO (Orari, Mappa, Contatti)
        ============================================================ -->
-  <section id="galleria" aria-label="Galleria dei lavori">
+  <section id="info" aria-label="Informazioni — orari, dove siamo, contatti">
     <div class="section-wrap">
 
       <div class="section-header reveal">
-        <div class="sig-line" aria-hidden="true"></div>
-        <p class="section-label">Galleria</p>
-        <h2 class="section-title">I <em>lavori</em></h2>
+        <p class="section-label">Dove siamo</p>
+        <h2 class="section-title">Trovaci <em>qui</em></h2>
       </div>
 
-      <!-- Griglia asimmetrica:
-           Col sinistra (1.2fr): item 1 occupa 2 righe (portrait)
-           Col centro (1fr):    item 2 + item 4
-           Col destra (1fr):    item 3 + item 5
-           Riga 3 (implicita):  item 6 occupa colonne 2-3 (landscape)
-           
-           DA SOSTITUIRE: rimpiazza gli src degli <img> con le foto reali.
-           I file SVG placeholder si trovano in assets/gallery/
-           Usa formato .jpg per le foto reali (es. gallery-01.jpg).
-      -->
-      <div class="gallery-grid" role="list" aria-label="Galleria fotografica dei lavori">
+      <div class="info-grid">
 
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-01.jpg — foto verticale (portrait) -->
-          <img
-            src="assets/gallery/gallery-01.svg"
-            alt="Lavoro 1 — taglio uomo"
-            width="600"
-            height="800"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-02.jpg — foto quadrata -->
-          <img
-            src="assets/gallery/gallery-02.svg"
-            alt="Lavoro 2 — taglio e barba"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-03.jpg — foto quadrata -->
-          <img
-            src="assets/gallery/gallery-03.svg"
-            alt="Lavoro 3 — fade"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-04.jpg — foto quadrata -->
-          <img
-            src="assets/gallery/gallery-04.svg"
-            alt="Lavoro 4 — barba rasatura"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-05.jpg — foto quadrata -->
-          <img
-            src="assets/gallery/gallery-05.svg"
-            alt="Lavoro 5 — contorno e disegni"
-            width="600"
-            height="600"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-        <figure class="gallery-item reveal" role="listitem">
-          <!-- DA SOSTITUIRE: gallery-06.jpg — foto orizzontale (landscape) -->
-          <img
-            src="assets/gallery/gallery-06.svg"
-            alt="Lavoro 6 — trattamento completo"
-            width="900"
-            height="600"
-            loading="lazy"
-          />
-          <div class="gallery-item-overlay" aria-hidden="true">
-            <span>Vedi ↗</span>
-          </div>
-        </figure>
-
-      </div><!-- /gallery-grid -->
-    </div>
-  </section>
-
-  <div class="section-divider" role="separator" aria-hidden="true"></div>
-
-
-  <!-- ============================================================
-       SEZIONE 5 — DOVE SIAMO / ORARI
-       ============================================================ -->
-  <section id="dove-siamo" aria-label="Dove siamo e orari">
-    <div class="section-wrap">
-
-      <div class="section-header reveal">
-        <div class="sig-line" aria-hidden="true"></div>
-        <p class="section-label">Info</p>
-        <h2 class="section-title">Dove <em>siamo</em></h2>
-      </div>
-
-      <div class="location-grid">
-
-        <!-- Colonna sinistra: info -->
-        <div class="location-info">
-
-          <!-- Indirizzo -->
-          <div class="location-info-block reveal">
-            <p class="location-info-block-label">Indirizzo</p>
-            <p>
-              Via Canaletto 1<br />
-              40061 Minerbio (BO)<br />
-              Emilia-Romagna
-            </p>
-          </div>
+        <!-- Colonna sinistra: orari + contatti -->
+        <div class="info-col">
 
           <!-- Orari -->
-          <!-- DA CONFERMARE: orari verificati con il barber -->
-          <div class="location-info-block reveal">
-            <p class="location-info-block-label">Orari</p><!-- DA CONFERMARE: orario reale -->
-            <div class="orari-table" role="table" aria-label="Orari di apertura">
-              <span class="orari-day" role="cell">Lun – Ven</span>
-              <span class="orari-time" role="cell">9:00 – 12:30 / 13:00 – 21:00</span><!-- DA CONFERMARE -->
-              <span class="orari-day" role="cell">Sabato</span>
-              <span class="orari-time" role="cell">8:00 – 13:30</span><!-- DA CONFERMARE -->
-              <span class="orari-day" role="cell">Domenica</span>
-              <span class="orari-time orari-closed" role="cell">Chiuso</span>
+          <div class="info-block reveal">
+            <p class="info-block-label">Orari</p>
+            <div class="orari-table" role="table" aria-label="Orari di apertura Barber Feb">
+              <div class="orari-row" role="row">
+                <span class="orari-day" role="cell">Lunedì</span>
+                <span class="orari-time" role="cell">13:30 – 20:00</span>
+              </div>
+              <div class="orari-row" role="row">
+                <span class="orari-day" role="cell">Martedì</span>
+                <span class="orari-time" role="cell">9:00 – 12:30 / 13:00 – 20:00</span>
+              </div>
+              <div class="orari-row" role="row">
+                <span class="orari-day" role="cell">Mer – Gio – Ven</span>
+                <span class="orari-time" role="cell">9:00 – 12:30 / 12:30 – 21:00</span>
+              </div>
+              <div class="orari-row" role="row">
+                <span class="orari-day" role="cell">Sabato</span>
+                <span class="orari-time" role="cell">8:00 – 13:30</span>
+              </div>
+              <div class="orari-row" role="row">
+                <span class="orari-day" role="cell">Domenica</span>
+                <span class="orari-time orari-closed" role="cell">Chiuso</span>
+              </div>
             </div>
           </div>
 
-          <!-- Contatti -->
-          <div class="location-info-block reveal">
-            <p class="location-info-block-label">Contatti</p>
-            <!-- DA CONFERMARE: numero di telefono confermato -->
-            <a href="tel:+393339928198" aria-label="Chiama Barber Feb">+39 333 992 8198</a>
+          <!-- Indirizzo -->
+          <div class="info-block reveal">
+            <p class="info-block-label">Indirizzo</p>
+            <p class="info-block-text">
+              Via Giusta<br />
+              40061 Minerbio (BO)<br />
+              Emilia-Romagna
+            </p>
             <a
-              href="#"
-              data-instagram
+              href="https://maps.google.com/?q=Via+Giusta,+40061+Minerbio+BO"
+              class="info-block-link"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Profilo Instagram Barber Feb"
-            >@barber_feb su Instagram</a>
+              aria-label="Apri su Google Maps"
+            >
+              Apri su Maps ↗
+            </a>
           </div>
 
-        </div><!-- /location-info -->
+          <!-- Contatti -->
+          <div class="info-block reveal">
+            <p class="info-block-label">Contatti</p>
+            <div class="contact-links">
+              <a href="tel:+393339928198" class="contact-link" aria-label="Chiama Barber Feb">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.71a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                +39 333 992 8198
+              </a>
+              <a href="https://wa.me/393339928198" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Scrivici su WhatsApp">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </span>
+                WhatsApp
+              </a>
+              <a href="https://instagram.com/barber_feb" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Barber Feb">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </span>
+                @barber_feb
+              </a>
+            </div>
+          </div>
 
-        <!-- Colonna destra: mappa -->
-        <div class="location-map reveal" aria-label="Mappa Google Maps — Via Canaletto 1, Minerbio">
-          <!-- Google Maps embed — Via Canaletto 1, 40061 Minerbio BO -->
+        </div><!-- /info-col -->
+
+        <!-- Mappa -->
+        <div class="info-map reveal" aria-label="Mappa — Via Giusta, Minerbio">
           <iframe
-            src="https://maps.google.com/maps?q=Via+Canaletto+1,+40061+Minerbio+BO,+Italy&output=embed&hl=it&z=16"
+            src="https://maps.google.com/maps?q=Via+Giusta,+40061+Minerbio+BO,+Italy&output=embed&hl=it&z=16"
             width="600"
             height="450"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Posizione Barber Feb — Via Canaletto 1, Minerbio"
+            title="Posizione Barber Feb — Via Giusta, Minerbio (BO)"
           ></iframe>
         </div>
 
-      </div><!-- /location-grid -->
-
-      <div class="location-cta reveal">
-        <a
-          href="#"
-          class="btn-primary"
-          data-booking
-          target="_blank"
-          rel="noopener noreferrer"
-          id="location-cta-btn"
-        >
-          Prenota il tuo taglio <span class="btn-arrow">↗</span>
-        </a>
-      </div>
+      </div><!-- /info-grid -->
 
     </div>
   </section>
@@ -557,46 +638,45 @@
 
 
   <!-- ============================================================
-       SEZIONE 6 — FOOTER
+       FOOTER
        ============================================================ -->
   <footer id="footer" aria-label="Footer Barber Feb">
     <div class="footer-inner">
 
       <div class="footer-top">
-        <!-- Monogramma BF — firma del brand -->
-        <div class="footer-monogram" aria-hidden="true">BF</div>
-
-        <div>
-          <div class="sig-line" style="margin-bottom: 1.25rem;" aria-hidden="true"></div>
-          <div class="footer-links-row">
-            <a
-              href="#"
-              data-instagram
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram Barber Feb"
-            >Instagram</a>
-            <a href="tel:+393339928198" aria-label="Telefono Barber Feb">+39 333 992 8198</a><!-- DA CONFERMARE -->
-            <a
-              href="#"
-              data-booking
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-ghost"
-              id="footer-cta-btn"
-            >
-              Prenota il tuo taglio <span class="btn-arrow">↗</span>
-            </a>
-          </div>
+        <div class="footer-brand">
+          <span class="footer-logo-b">B</span>
+          <span class="footer-logo-text">arber Feb</span>
         </div>
+
+        <nav class="footer-nav" aria-label="Link utili footer">
+          <a href="#taglio">Taglio</a>
+          <a href="#barba">Barba</a>
+          <a href="#prezzi">Prezzi</a>
+          <a href="#info">Info</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookie.html">Cookie</a>
+        </nav>
+
+        <a
+          href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um"
+          class="btn-ghost footer-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="footer-cta-btn"
+        >
+          Prenota <span class="btn-arrow">↗</span>
+        </a>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          <span id="footer-year"></span> © Barber Feb — Minerbio (BO)
+        <p class="footer-copy">
+          <span id="footer-year"></span> © Barber Feb — Via Giusta, 40061 Minerbio (BO)
         </p>
-        <p class="footer-copyright">
-          Via Canaletto 1, 40061 Minerbio
+        <p class="footer-copy footer-copy-small">
+          P.IVA: da completare &nbsp;·&nbsp;
+          <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="cookie.html">Cookie Policy</a>
         </p>
       </div>
 
@@ -605,40 +685,59 @@
 
 
   <!-- ============================================================
-       LIGHTBOX
+       LIGHTBOX MULTI-ANGOLAZIONE
+       Due opzioni mostrate a confronto nella stessa modal.
        ============================================================ -->
   <div
-    id="lightbox"
+    id="work-modal"
+    class="work-modal"
     role="dialog"
     aria-modal="true"
-    aria-label="Visualizzatore galleria"
+    aria-label="Visualizzatore lavoro"
   >
-    <button
-      id="lightbox-close"
-      class="lightbox-close"
-      aria-label="Chiudi galleria"
-    >✕</button>
+    <div class="work-modal-inner">
 
-    <button
-      id="lightbox-prev"
-      class="lightbox-nav lightbox-prev"
-      aria-label="Foto precedente"
-    >←</button>
+      <!-- Header modal -->
+      <div class="work-modal-header">
+        <div class="work-modal-meta">
+          <span id="modal-category" class="modal-category-badge"></span>
+          <span id="modal-title" class="modal-title"></span>
+        </div>
+        <button id="modal-close" class="modal-close" aria-label="Chiudi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
 
-    <button
-      id="lightbox-next"
-      class="lightbox-nav lightbox-next"
-      aria-label="Foto successiva"
-    >→</button>
+      <!-- Corpo modal -->
+      <div class="work-modal-body">
 
-    <img
-      id="lightbox-img"
-      class="lightbox-media"
-      src=""
-      alt=""
-    />
+        <!-- IMMAGINE PRINCIPALE -->
+        <div class="modal-main-img-wrap">
+          <img id="modal-main-img" src="" alt="" class="modal-main-img" />
 
-    <div id="lightbox-counter" class="lightbox-counter" aria-live="polite"></div>
+          <!-- Frecce navigazione angolazioni -->
+          <button id="modal-prev" class="modal-arrow modal-arrow-left" aria-label="Angolazione precedente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="modal-next" class="modal-arrow modal-arrow-right" aria-label="Angolazione successiva">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <!-- Label angolazione corrente -->
+          <div id="modal-angle-label" class="modal-angle-label" aria-live="polite"></div>
+        </div>
+
+        <!-- STRISCIA THUMBNAIL angolazioni -->
+        <div id="modal-thumbs" class="modal-thumbs" role="list" aria-label="Angolazioni disponibili">
+          <!-- populate by JS -->
+        </div>
+
+      </div><!-- /work-modal-body -->
+
+    </div><!-- /work-modal-inner -->
+
+    <!-- Sfondo overlay — click chiude -->
+    <div class="work-modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
   </div>
 
 

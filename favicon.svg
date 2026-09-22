@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" fill="#0D0C0B"/>
-  <rect x="1" y="1" width="62" height="62" stroke="#B08D57" stroke-width="1" fill="none"/>
-  <text x="32" y="46" font-family="Georgia, serif" font-size="28" font-weight="700" font-style="italic" fill="#B08D57" text-anchor="middle" letter-spacing="-1">BF</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="4" fill="#0a0a0a"/>
+  <text x="9" y="38" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="#ffffff" letter-spacing="-2">B</text>
+  <!-- sottilissimo bordo verde foresta -->
+  <rect x="0.5" y="0.5" width="47" height="47" rx="3.5" fill="none" stroke="#3a5e45" stroke-width="1"/>
 </svg>

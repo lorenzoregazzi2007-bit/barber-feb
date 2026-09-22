@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <rect width="600" height="800" fill="#161616"/>
+  <rect x="1" y="1" width="598" height="798" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+  <!-- Simple camera icon placeholder -->
+  <g transform="translate(300,400)">
+    <rect x="-60" y="-48" width="120" height="96" rx="8" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="10" fill="#2a2a2a"/>
+    <rect x="-12" y="-52" width="24" height="8" rx="3" fill="#2a2a2a"/>
+  </g>
+  <!-- Bottom label -->
+  <text x="300" y="540" font-family="monospace" font-size="10" fill="#2a2a2a" text-anchor="middle" letter-spacing="3">FOTO DA INSERIRE</text>
+</svg>
