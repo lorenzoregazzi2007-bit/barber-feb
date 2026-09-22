@@ -6,15 +6,15 @@
 
   <!-- SEO Meta Tags -->
   <title>Barber Feb — Barbiere a Minerbio (BO)</title>
-  <meta name="description" content="Barber Feb è il salon barbiere di riferimento a Minerbio (Bologna). Taglio uomo skin fade, regolazione barba e trattamenti su misura. Prenota subito su TakeCare." />
-  <meta name="keywords" content="barbiere Minerbio, barber Feb, taglio uomo Bologna, sfumatura skin fade, barba Minerbio" />
+  <meta name="description" content="Barber Feb è il salon barbiere di riferimento a Minerbio (Bologna) in Via Canaletto 1. Taglio uomo skin fade, regolazione barba e trattamenti su misura. Prenota subito su TakeCare." />
+  <meta name="keywords" content="barbiere Minerbio, barber Feb, Via Canaletto Minerbio, taglio uomo Bologna, sfumatura skin fade, barba Minerbio" />
   <meta name="author" content="Barber Feb" />
   <link rel="canonical" href="https://lorenzoregazzi2007-bit.github.io/barber-feb/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Barber Feb — Barbiere a Minerbio (BO)" />
-  <meta property="og:description" content="Precisione & Stile a Minerbio. Prenota online su TakeCare." />
+  <meta property="og:description" content="Precisione & Stile a Minerbio in Via Canaletto 1. Prenota online su TakeCare." />
   <meta property="og:locale" content="it_IT" />
 
   <!-- Favicon -->
@@ -119,8 +119,8 @@
 
           <div class="hero-footer-row">
             <div class="hero-location-info">
-              <span class="location-address">VIA GIUSTA, 1</span>
-              <span class="location-city">MINERBIO (BO)</span>
+              <span class="location-address">VIA CANALETTO, 1</span>
+              <span class="location-city">40061 MINERBIO (BO)</span>
             </div>
 
             <div class="hero-social-links">
@@ -151,7 +151,7 @@
   </section>
 
   <!-- ============================================================
-       ABOUT US SECTION (Collage with Generated Photos)
+       ABOUT US SECTION (Collage with Corrected Address)
        ============================================================ -->
   <section id="chi-siamo" class="about-section">
     <div class="section-container">
@@ -174,7 +174,7 @@
             DA BARBER FEB A MINERBIO, CI DEDICHIAMO A OFFRIRE UN'ESPERIENZA DI CORTE E CURA DELLA BARBA DI LIVELLO SUPERIORE. IL NOSTRO OBIETTIVO È VALORIZZARE LO STILE UNICO DI OGNI CLIENTE CON TECNICA, PRECISIONE E PASSIONE.
           </p>
           <p class="about-body">
-            Ogni servizio è pensato per garantire massima cura nei dettagli, dalle sfumature skin fade più pulite fino alla regolazione della barba con panno caldo. Un ambiente moderno, essenziale e rilassante ti aspetta in Via Giusta 1.
+            Ogni servizio è pensato per garantire massima cura nei dettagli, dalle sfumature skin fade più pulite fino alla regolazione della barba con panno caldo. Un ambiente moderno, essenziale e rilassante ti aspetta in Via Canaletto 1.
           </p>
           <a href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um" target="_blank" rel="noopener" class="btn-solid-white about-btn">PRENOTA UN APPUNTAMENTO</a>
         </div>
@@ -184,7 +184,7 @@
   </section>
 
   <!-- ============================================================
-       OUR SERVICES SECTION (Generated Photos)
+       OUR SERVICES SECTION
        ============================================================ -->
   <section id="servizi" class="services-section">
     <div class="section-container">
@@ -293,14 +293,14 @@
   </section>
 
   <!-- ============================================================
-       GALLERY & MULTI-ANGLE LIGHTBOX SECTION
+       GALLERY WITH INTERACTIVE MULTI-ANGLE CAROUSEL SLIDER
        ============================================================ -->
   <section id="galleria" class="gallery-section">
     <div class="section-container">
       
       <div class="gallery-header">
         <h2 class="section-title text-center">LA NOSTRA GALLERIA</h2>
-        <p class="section-subtitle text-center">SELEZIONA UNA FOTO PER ESPLORARE LE DIVERSE ANGOLAZIONI (FRONTALE, LATERALE, POSTERIORE)</p>
+        <p class="section-subtitle text-center">USA LE FRECCE ‹ › SULLE SCHEDE PER SFOGLIARE LE DIVERSE ANGOLAZIONI (FRONTALE, LATERALE, POSTERIORE)</p>
         
         <!-- Category Filters -->
         <div class="filter-tabs">
@@ -311,88 +311,174 @@
         </div>
       </div>
 
-      <!-- Gallery Grid -->
+      <!-- Gallery Grid with Interactive Image Sliders -->
       <div class="gallery-grid" id="gallery-grid">
         
         <!-- Card 1 -->
-        <div class="gallery-card" data-category="taglio"
+        <div class="gallery-card" data-category="taglio" data-current-index="0"
              data-title="Skin Fade Crop"
              data-angles='["assets/images/skin-fade.png","assets/images/hero-model.png","assets/images/about-2.png"]'
              data-labels='["Frontale","Laterale","Posteriore"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/skin-fade.png" alt="Skin Fade Crop" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/skin-fade.png" alt="Skin Fade Crop - Frontale" class="slider-slide active" />
+              <img src="assets/images/hero-model.png" alt="Skin Fade Crop - Laterale" class="slider-slide" />
+              <img src="assets/images/about-2.png" alt="Skin Fade Crop - Posteriore" class="slider-slide" />
+            </div>
+
+            <!-- Slider Nav Controls -->
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <!-- Angle Dots Indicator -->
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Skin Fade Crop</span>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="gallery-card" data-category="taglio"
+        <div class="gallery-card" data-category="taglio" data-current-index="0"
              data-title="Low Taper Fade"
              data-angles='["assets/images/hero-model.png","assets/images/about-2.png","assets/images/skin-fade.png"]'
              data-labels='["Frontale","Laterale","Posteriore"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/hero-model.png" alt="Low Taper Fade" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/hero-model.png" alt="Low Taper Fade - Frontale" class="slider-slide active" />
+              <img src="assets/images/about-2.png" alt="Low Taper Fade - Laterale" class="slider-slide" />
+              <img src="assets/images/skin-fade.png" alt="Low Taper Fade - Posteriore" class="slider-slide" />
+            </div>
+
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Low Taper Fade</span>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="gallery-card" data-category="barba"
+        <div class="gallery-card" data-category="barba" data-current-index="0"
              data-title="Barba Rasoio & Contour"
              data-angles='["assets/images/beard-trim.png","assets/images/hero-banner.png","assets/images/about-1.png"]'
              data-labels='["Frontale","Profilo Destro","Profilo Sinistro"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/beard-trim.png" alt="Barba Rasoio & Contour" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/beard-trim.png" alt="Barba Rasoio - Frontale" class="slider-slide active" />
+              <img src="assets/images/hero-banner.png" alt="Barba Rasoio - Profilo Destro" class="slider-slide" />
+              <img src="assets/images/about-1.png" alt="Barba Rasoio - Profilo Sinistro" class="slider-slide" />
+            </div>
+
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Barba Rasoio &amp; Contour</span>
             </div>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="gallery-card" data-category="colore"
+        <div class="gallery-card" data-category="colore" data-current-index="0"
              data-title="Mesh Biondo Platino"
              data-angles='["assets/images/about-2.png","assets/images/hero-model.png","assets/images/skin-fade.png"]'
              data-labels='["Frontale","Laterale","Posteriore"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/about-2.png" alt="Mesh Biondo Platino" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/about-2.png" alt="Mesh Biondo Platino - Frontale" class="slider-slide active" />
+              <img src="assets/images/hero-model.png" alt="Mesh Biondo Platino - Laterale" class="slider-slide" />
+              <img src="assets/images/skin-fade.png" alt="Mesh Biondo Platino - Posteriore" class="slider-slide" />
+            </div>
+
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Mesh Biondo Platino</span>
             </div>
           </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="gallery-card" data-category="taglio"
+        <div class="gallery-card" data-category="taglio" data-current-index="0"
              data-title="Textured Scissor Cut"
              data-angles='["assets/images/hero-banner.png","assets/images/skin-fade.png","assets/images/hero-model.png"]'
              data-labels='["Frontale","Profilo","Retro"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/hero-banner.png" alt="Textured Scissor Cut" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/hero-banner.png" alt="Textured Scissor Cut - Frontale" class="slider-slide active" />
+              <img src="assets/images/skin-fade.png" alt="Textured Scissor Cut - Profilo" class="slider-slide" />
+              <img src="assets/images/hero-model.png" alt="Textured Scissor Cut - Retro" class="slider-slide" />
+            </div>
+
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Textured Scissor Cut</span>
             </div>
           </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="gallery-card" data-category="barba"
+        <div class="gallery-card" data-category="barba" data-current-index="0"
              data-title="Combo Taglio & Barba VIP"
              data-angles='["assets/images/about-1.png","assets/images/beard-trim.png","assets/images/hero-model.png"]'
              data-labels='["Frontale","Laterale","Posteriore"]'>
           <div class="card-image-wrap">
-            <img src="assets/images/about-1.png" alt="Combo Taglio & Barba VIP" loading="lazy" />
+            <div class="card-slider-track">
+              <img src="assets/images/about-1.png" alt="Combo VIP - Frontale" class="slider-slide active" />
+              <img src="assets/images/beard-trim.png" alt="Combo VIP - Laterale" class="slider-slide" />
+              <img src="assets/images/hero-model.png" alt="Combo VIP - Posteriore" class="slider-slide" />
+            </div>
+
+            <button class="slider-arrow prev-arrow" aria-label="Angolazione precedente">&lsaquo;</button>
+            <button class="slider-arrow next-arrow" aria-label="Angolazione successiva">&rsaquo;</button>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
             <div class="card-overlay">
-              <span class="card-badge">3 Angolazioni</span>
+              <span class="card-badge angle-label-badge">ANGOLAZIONE: FRONTALE (1/3)</span>
               <span class="card-title">Combo Taglio &amp; Barba VIP</span>
             </div>
           </div>
@@ -420,7 +506,7 @@
               Scegli il tuo servizio prefissato e accedi direttamente all'app di booking di Barber Feb. Puoi selezionare il giorno, l'orario e la tipologia di servizio in modo rapido e senza attese.
             </p>
 
-            <!-- Quick Service Selector that direct launches TakeCare -->
+            <!-- Quick Service Selector -->
             <div class="takecare-quick-select">
               <label class="quick-label">SELEZIONA IL SERVIZIO:</label>
               <select id="quick-service-select" class="takecare-select">
@@ -518,7 +604,7 @@
   </section>
 
   <!-- ============================================================
-       CONTACTS & MAP SECTION
+       CONTACTS & MAP SECTION (Corrected Address Via Canaletto 1)
        ============================================================ -->
   <section id="contatti" class="contact-section">
     <div class="section-container">
@@ -533,7 +619,7 @@
           <div class="contact-details-list">
             <div class="contact-item">
               <span class="contact-label">INDIRIZZO</span>
-              <p class="contact-val">Via Giusta, 1 – 40057 Minerbio (BO)</p>
+              <p class="contact-val">Via Canaletto, 1 – 40061 Minerbio (BO)</p>
             </div>
             <div class="contact-item">
               <span class="contact-label">TELEFONO / WHATSAPP</span>
@@ -545,14 +631,14 @@
             </div>
           </div>
 
-          <a href="https://maps.google.com/?q=Via+Giusta+1+Minerbio+BO" target="_blank" rel="noopener" class="btn-outline-white">APRI IN GOOGLE MAPS</a>
+          <a href="https://maps.google.com/?q=Via+Canaletto+1+40061+Minerbio+BO" target="_blank" rel="noopener" class="btn-outline-white">APRI IN GOOGLE MAPS</a>
         </div>
 
         <!-- Google Maps Frame -->
         <div class="contact-map-col">
           <iframe
-            title="Mappa Barber Feb Minerbio"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840.485292415174!2d11.4782928!3d44.6200216!2m3!1f00!f0d3f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd254e2621c17%3A0x6fb878b17a14e912!2sVia%20Giusta%2C%201%2C%2040057%20Minerbio%20BO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+            title="Mappa Barber Feb Via Canaletto 1 Minerbio"
+            src="https://maps.google.com/maps?q=Via+Canaletto+1,+40061+Minerbio+BO&t=&z=16&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="400"
             style="border:0;"
@@ -574,7 +660,7 @@
     <div class="section-container footer-inner">
       <div class="footer-left">
         <span class="footer-logo">BARBER FEB</span>
-        <p class="footer-copy">© 2026 Barber Feb — Minerbio (BO). Tutti i diritti riservati.</p>
+        <p class="footer-copy">© 2026 Barber Feb — Via Canaletto 1, Minerbio (BO). Tutti i diritti riservati.</p>
       </div>
 
       <div class="footer-links">
@@ -601,9 +687,11 @@
         <button class="angle-btn" data-index="2">Posteriore</button>
       </div>
 
-      <!-- Image Display -->
+      <!-- Image Display with Slider Controls in Modal -->
       <div class="lightbox-image-box">
+        <button id="modal-prev-btn" class="modal-slider-nav prev" aria-label="Angolazione precedente">&lsaquo;</button>
         <img id="lightbox-img" src="" alt="Dettaglio angolazione taglio" />
+        <button id="modal-next-btn" class="modal-slider-nav next" aria-label="Angolazione successiva">&rsaquo;</button>
       </div>
 
       <a href="https://panel.takecareproject.it/go/s/cmqspx6b5000o0wmcbdl5d5um" target="_blank" rel="noopener" class="btn-solid-white modal-cta-btn">PRENOTA QUESTO LOOK SU TAKECARE</a>

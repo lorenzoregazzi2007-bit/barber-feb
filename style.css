@@ -1,5 +1,5 @@
 /* ============================================================
-   BARBER FEB — style.css (ONYX BARBERS LUXURY AESTHETIC v4.1)
+   BARBER FEB — style.css (ONYX BARBERS LUXURY AESTHETIC v4.3)
    Monochrome Pitch Black · White · Plant Green Accents
    ============================================================ */
 
@@ -570,7 +570,7 @@ img {
 }
 
 /* ============================================================
-   GALLERY & MULTI-ANGLE SECTION
+   GALLERY & INTERACTIVE CARD SLIDER
    ============================================================ */
 .gallery-section {
   padding: 100px 0;
@@ -619,10 +619,11 @@ img {
   overflow: hidden;
   cursor: pointer;
   transition: var(--transition);
+  position: relative;
 }
 
 .gallery-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: var(--accent-green);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -634,15 +635,72 @@ img {
   overflow: hidden;
 }
 
-.card-image-wrap img {
+.card-slider-track {
+  display: flex;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gallery-card:hover img {
-  transform: scale(1.05);
+.slider-slide {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider Arrows on Cards */
+.slider-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background-color: rgba(10, 10, 10, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 12;
+  transition: var(--transition);
+}
+
+.prev-arrow { left: 12px; }
+.next-arrow { right: 12px; }
+
+.slider-arrow:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Dots Indicator */
+.slider-dots {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 12;
+}
+
+.slider-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: var(--transition);
+}
+
+.slider-dots .dot.active {
+  background-color: var(--accent-green);
+  width: 18px;
+  border-radius: 4px;
 }
 
 .card-overlay {
@@ -650,11 +708,13 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.4) 70%, transparent);
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
+  z-index: 11;
+  pointer-events: none;
 }
 
 .card-badge {
@@ -971,7 +1031,7 @@ img {
 }
 
 /* ============================================================
-   LIGHTBOX MODAL (Multi-Angle View)
+   LIGHTBOX MODAL (Multi-Angle View Slider)
    ============================================================ */
 .lightbox-modal {
   position: fixed;
@@ -1055,6 +1115,7 @@ img {
 }
 
 .lightbox-image-box {
+  position: relative;
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 8px;
@@ -1067,6 +1128,34 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.modal-slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: var(--transition);
+}
+
+.modal-slider-nav.prev { left: 12px; }
+.modal-slider-nav.next { right: 12px; }
+
+.modal-slider-nav:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .modal-cta-btn {
