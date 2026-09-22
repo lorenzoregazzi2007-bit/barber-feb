@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="headLight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#4a4a4a" />
+      <stop offset="100%" stop-color="#121212" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="900" fill="url(#bgGrad)" />
+
+  <!-- Background Grid lines subtle -->
+  <path d="M0 200 H800 M0 400 H800 M0 600 H800 M200 0 V900 M400 0 V900 M600 0 V900" stroke="#222" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <!-- Male Silhouette Head & Fade Haircut -->
+  <g transform="translate(400, 480)">
+    <!-- Shoulders -->
+    <path d="M-260 420 C-240 260, -160 220, -100 200 C-60 190, 60 190, 100 200 C160 220, 240 260, 260 420 Z" fill="#181818" />
+    <path d="M-220 420 C-200 280, -140 240, -80 220 L80 220 C140 240, 200 280, 220 420 Z" fill="#222222" />
+
+    <!-- Neck -->
+    <rect x="-65" y="80" width="130" height="130" fill="#2a2a2a" rx="10" />
+    <path d="M-65 140 Q0 180 65 140 V200 H-65 Z" fill="#1f1f1f" />
+
+    <!-- Head & Ears -->
+    <ellipse cx="-75" cy="20" rx="18" ry="32" fill="#333333" />
+    <ellipse cx="75" cy="20" rx="18" ry="32" fill="#333333" />
+    <path d="M-70 -70 C-70 -160, 70 -160, 70 -70 C70 40, 65 100, 0 110 C-65 100, -70 40, -70 -70 Z" fill="url(#headLight)" />
+
+    <!-- Skin Fade Haircut Textured Top -->
+    <!-- Low Fade sides -->
+    <path d="M-72 -60 C-72 -120, -40 -150, 0 -150 C40 -150, 72 -120, 72 -60 C72 -20, 68 10, 60 40 C55 -10, 40 -80, 0 -80 C-40 -80, -55 -10, -60 40 C-68 10, -72 -20, -72 -60 Z" fill="#141414" />
+    
+    <!-- Top Hair Texture Waves (Modern Crop / Fade) -->
+    <path d="M-65 -120 C-60 -180, -20 -200, 0 -200 C20 -200, 60 -180, 65 -120 C68 -100, 60 -80, 0 -85 C-60 -80, -68 -100, -65 -120 Z" fill="#e0e0e0" />
+    
+    <!-- Textured Strands -->
+    <path d="M-50 -130 Q-30 -170 0 -160 Q30 -170 50 -130 Q20 -140 0 -135 Q-20 -140 -50 -130 Z" fill="#ffffff" />
+    <path d="M-40 -150 Q-10 -190 15 -180 Q40 -185 45 -145 Q15 -155 -10 -150 Z" fill="#cccccc" />
+    <path d="M-55 -110 Q-35 -145 -5 -135 Q25 -145 55 -110 Q25 -120 -5 -115 Z" fill="#ffffff" />
+
+    <!-- Sunglasses / Modern Shades -->
+    <path d="M-65 -15 L-15 -20 L15 -20 L65 -15 L60 15 L20 10 L-20 10 L-60 15 Z" fill="#090909" stroke="#444" stroke-width="2"/>
+    <path d="M-55 -10 L-20 -15 L-22 5 L-50 8 Z" fill="#1a1a1a" />
+    <path d="M55 -10 L20 -15 L22 5 L50 8 Z" fill="#1a1a1a" />
+    <line x1="-65" y1="-12" x2="-80" y2="-18" stroke="#333" stroke-width="3" />
+    <line x1="65" y1="-12" x2="80" y2="-18" stroke="#333" stroke-width="3" />
+  </g>
+
+  <!-- Overlay Watermark Badge -->
+  <text x="40" y="850" font-family="'Montserrat', sans-serif" font-size="14" font-weight="800" fill="#444" letter-spacing="4">BARBER FEB · ESTETICA & PRECISIONE</text>
+  <rect x="40" y="870" width="120" height="2" fill="#10b981" />
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+  <rect width="1200" height="450" fill="#0d0d0d" />
+  <path d="M0 0 H1200 V450 H0 Z" fill="#141414" />
+  
+  <!-- Subtle lighting gradient -->
+  <radialGradient id="lightGlow" cx="70%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#333333" />
+    <stop offset="100%" stop-color="#0a0a0a" />
+  </radialGradient>
+  <rect width="1200" height="450" fill="url(#lightGlow)" opacity="0.6" />
+
+  <!-- Stylized Barber at Work Silhouette -->
+  <g transform="translate(450, 50)">
+    <!-- Barber arm with clippers -->
+    <path d="M-200 300 C-150 200, -80 150, 0 140 L80 160 C20 200, -80 250, -150 350 Z" fill="#262626" />
+    <path d="M-190 290 Q-100 170 10 155 L60 170 Q-60 220 -140 340 Z" fill="#383838" />
+    
+    <!-- Barber Glove hand holding clipper -->
+    <ellipse cx="40" cy="150" rx="35" ry="25" fill="#1a1a1a" />
+    
+    <!-- Clipper -->
+    <rect x="50" y="120" width="80" height="35" rx="6" fill="#444444" transform="rotate(-15, 50, 120)"/>
+    <rect x="125" y="110" width="15" height="30" fill="#e0e0e0" transform="rotate(-15, 125, 110)"/>
+
+    <!-- Client Head Being Cut -->
+    <g transform="translate(250, 120)">
+      <!-- Beard & Head Profile -->
+      <path d="M0 50 C20 -30, 80 -80, 150 -80 C230 -80, 270 -20, 270 60 C270 140, 240 200, 180 250 C120 290, 60 280, 20 230 C-20 180, -20 100, 0 50 Z" fill="#181818" />
+      <!-- Sharp Beard Profile -->
+      <path d="M120 230 C160 250, 220 230, 240 170 C220 170, 190 190, 160 180 C130 170, 110 140, 100 100 C90 140, 90 200, 120 230 Z" fill="#2a2a2a" />
+      <!-- Hair Fade Texture -->
+      <path d="M140 -70 C190 -70, 240 -30, 250 30 C220 10, 180 0, 140 -10 Z" fill="#ffffff" opacity="0.9"/>
+    </g>
+
+    <!-- Bokeh Light Dots -->
+    <circle cx="-100" cy="80" r="12" fill="#fff" opacity="0.15" />
+    <circle cx="150" cy="40" r="24" fill="#fff" opacity="0.1" />
+    <circle cx="450" cy="90" r="18" fill="#fff" opacity="0.08" />
+    <circle cx="-250" cy="220" r="30" fill="#fff" opacity="0.05" />
+  </g>
+
+  <!-- Typography Overlay -->
+  <text x="60" y="380" font-family="'Montserrat', sans-serif" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="4">EXPERT FADES & BEARD SCULPTING</text>
+  <text x="60" y="410" font-family="'Inter', sans-serif" font-size="14" font-weight="500" fill="#888888" letter-spacing="2">BARBER FEB · MINERBIO (BO)</text>
+</svg>
